@@ -22,17 +22,24 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #333333;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fcfcfc ;
   }
 
   .el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
     border-bottom: 0px solid #F9591E;
-    background-color: #ccc !important;
+    background-color: transparent !important;
     color: #2d2f33;
   }
 
   .el-menu--horizontal .el-menu-item {
     border-bottom: 0px solid #F9591E;
+  }
+
+  .el-menu--horizontal {
+    border-right: none;
+    border-bottom: solid 0px #e6e6e6;
   }
 
   #app {

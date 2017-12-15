@@ -1,26 +1,32 @@
 <template>
   <el-container>
-    <el-header style="padding:0px">
-      <el-row>
-        <el-menu :default-active="currentPath"
-                 class="el-menu-demo" mode="horizontal"
-                 background-color="#fff"
-                 router
-                 text-color="#000"
-                 active-text-color="#333"
-                 style="height:100px;align-content: center"
-                 @select="handleSelect">
-          <span>
-          <el-menu-item index="/home_service"><img :src="dlogo"/></el-menu-item>
-          <el-menu-item index="/visa_service">处理中心</el-menu-item>
-          <el-menu-item index="/account_service">处理中心</el-menu-item>
-          <el-menu-item index="/value_add_service">处理中心2</el-menu-item>
-          <el-menu-item index="/about_us">订单管理</el-menu-item>
-            </span>
-        </el-menu>
-      </el-row>
+    <el-header style="padding:0px; height: auto; position: absolute;z-index: 2">
+      <el-menu :default-active="currentPath"
+               class="el-menu-demo" mode="horizontal"
+               background-color="transparent"
+               router
+               text-color="#fff"
+               active-text-color="#f00"
+               style="height:100%;align-content: center;"
+               @select="handleSelect">
+        <el-menu-item index="/home_service">
+          <img :src="dlogo" style="height: auto; width: auto;"/>
+        </el-menu-item>
+        <el-menu-item index="/visa_service">解决方案</el-menu-item>
+        <el-menu-item index="/account_service">新闻与洞察</el-menu-item>
+        <el-menu-item index="/value_add_service">营销科学院</el-menu-item>
+        <el-menu-item index="/about_us">关于我们</el-menu-item>
+        <el-menu-item index="/chinese" style="padding:0px 40px 0px 0px;float: right">中文
+        </el-menu-item>
+        <el-menu-item :index="currentPath" style="padding:0px 3px 0px 3px;float: right">|
+        </el-menu-item>
+        <el-menu-item index="/english" style="padding:0px 0px 20px 20px;float: right;">
+          English
+        </el-menu-item>
+      </el-menu>
     </el-header>
-    <el-main id="segment-main" style="overflow-y: auto">
+    <el-main id="segment-main"
+             style="overflow-y: auto;padding:0px;position: relative;top:0px;z-index: 1">
       <div>
         <transition name="fade"
                     mode="out-in">
@@ -28,11 +34,49 @@
         </transition>
       </div>
     </el-main>
-    <el-footer style="overflow-y: auto">Footer</el-footer>
+    <el-footer style="">
+
+
+      <div style="border-bottom: 1px solid #ccc;margin:0"></div>
+      <div style="width:87%;margin:30px auto;">
+        <div style="overflow: hidden;margin: 0 auto;padding: 0;height:440px">
+          <div style="float:left;height:100%; border:0px solid #f00;width:20%">
+            <p class="footer-title">MiaoZhen</p>
+            <p>关于秒针</p>
+            <p>
+              <router-link to="visa_service">
+                kkk
+              </router-link>
+            </p>
+            <p>
+            <router-link to="visa_service">
+              zhang joe
+            </router-link>
+            </p>
+          </div>
+          <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
+            <p class="footer-title">产品&解决方案</p>
+            <p>关于秒针</p>
+          </div>
+          <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
+            <p class="footer-title">热门问题</p>
+          </div>
+          <div style="float: left; height:90%; border:0px solid #f00; width:40%;">
+            <p class="footer-title">logo</p>
+            <a target="_blank" href="http://weibo.com/miaozhensystems" class="sina1">joe</a>
+          </div>
+        </div>
+        <div style="border-bottom: 1px solid #808080;margin:0"></div>
+        <div>
+          <strong>Copyright</strong>
+          © 207 Miaozhen Systems. All Rights Reserved. 京公网安备 11010502030033号
+        </div>
+      </div>
+    </el-footer>
   </el-container>
 </template>
 <script>
-  import dlogo from "@/assets/images/dplogo.png"
+  import dlogo from "@/assets/images/mzlogo.png"
 
   export default  {
     name: "main",
@@ -44,60 +88,45 @@
         usage_info: "www.baidu.com",
         activeIndex: '1',
         activeIndex2: '1',
-        screenHeight: window.innerHeight,
         dlogo: dlogo,
         currentPath: "/home_service"
       }
     },
     mounted: function () {
-//      console.log("joe")
-      console.log(this.screenHeight);
-      let h = this.screenHeight - 60 - 60;
-      document.getElementById('segment-main').style.height = h + "px";//页面初始化
-      //document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化
-      window.onresize = () => {
-        return (() => {
-          this.screenHeight = window.innerHeight;
-        })()
-      };
+      console.log(window.innerHeight);
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+        this.currentPath = key
       }
     },
-    watch: {
-      screenHeight (val) {
-        this.screenHeight = val;
-        let h = this.screenHeight - 60 - 60;
-        document.getElementById('segment-main').style.height = h + "px";//检测窗口的大小，并赋值
-        //document.getElementById('segment-main-container').style.height = h - 95 + "px";//页面初始化
-      }
-    }
+    watch: {}
   }
 </script>
 <style>
   .el-header {
-    background-color: #B3C0D1;
+    background-color: transparent;
+    width: 100%;
     color: #333;
     text-align: center;
-    line-height: 60px;
   }
 
   .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
+    background-color: #262626;
+    color: #808080;
     text-align: center;
-    line-height: 60px;
-    overflow: auto;
+    line-height: 20px;
+    padding: 0;
+    height: auto !important;
   }
 
   .el-main {
-    background-color: #E9EEF3;
+    background-color: transparent;
     color: #333;
     text-align: center;
     line-height: 160px;
-    overflow: auto;
+    overflow: hidden;
     min-height: 200px;
   }
 
@@ -112,5 +141,25 @@
 
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
+  }
+
+  .el-menu-item, .el-submenu__title {
+    padding: 0 30px
+  }
+
+  .el-menu--horizontal .el-menu-item:hover {
+    background-color: transparent !important;
+    color: #f00 !important;
+  }
+
+  .sina1 {
+    width: 34px;
+    height: 27px;
+    background: url('../../assets/images/img15.png') no-repeat;
+  }
+
+  .footer-title {
+    font-size: 24px;
+    color: #ccc;
   }
 </style>
