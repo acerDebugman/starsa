@@ -2,46 +2,63 @@
 
   <div class="block">
     <el-carousel id="show-img" height="100%">
-      <el-carousel-item v-for="item in images" :key="item" >
+      <el-carousel-item v-for="item in images" :key="item">
         <router-link to="#" target="_blank" style="cursor:pointer" @click="goto(item)">
           <img :src="item" style="height: 100%;width: 100%;"/>
         </router-link>
       </el-carousel-item>
     </el-carousel>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 40px auto;">
-      <div style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">解决方案</p>
-        <p class="to-center" style="color:#ccc">XSTAR SOLUTIONS
+      <div
+        style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">签证类服务</p>
+        <p class="to-center" style="color:#ccc">XSTAR VISA SOLUTIONS
           <a href="/visa_service" target="_blank" style="float:right;">更多</a>
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 2 : 0"
+        <el-col :span="6" v-for="(obj, index) in visaMsgLst" :key="obj" :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
-          <el-card :body-style="{ padding: '0px' }">
-            <img :src="require('@/assets/images/hamburger.png')" class="image">
-            <div style="padding: 14px;">
-              <div style="">好吃的汉堡</div>
-              <div>好吃的汉堡2</div>
+          <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
+            <div style="height:300px;overflow-y: hidden">
+              <img :src="require('@/assets/images/visa-sub1.jpg')" class="image">
+            </div>
+            <div class="mybox-text" style="padding: 14px;">
+              <el-row>{{ obj[0] }}</el-row>
+              <el-row>{{ obj[1] }}</el-row>
+              <el-row><span>{{ obj[2] }}</span></el-row>
+              <el-row>{{ obj[3] }}</el-row>
               <div class="bottom clearfix">
                 <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button">操作按钮</el-button>
+                <el-button type="text" class="button">更多</el-button>
               </div>
             </div>
           </el-card>
         </el-col>
       </el-row>
+      <div
+        style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">会计类服务</p>
+        <p class="to-center" style="color:#ccc">XSTAR ACCOUNTING SOLUTIONS
+          <a href="/visa_service" target="_blank" style="float:right;">更多</a>
+        </p>
+      </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 2 : 0"
+        <el-col :span="6" v-for="(msg, index) in accountMsgLst" :key="msg"
+                :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
-          <el-card :body-style="{ padding: '0px' }">
-            <img :src="require('@/assets/images/hamburger.png')" class="image">
-            <div style="padding: 14px;">
-              <div style="">好吃的汉堡</div>
-              <div>好吃的汉堡2</div>
+          <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
+            <div style="height: 300px;overflow-y: hidden;">
+              <img :src="require('@/assets/images/hamburger.png')" class="image">
+            </div>
+            <div class="mybox-text" style="padding: 14px;">
+              <div style="">{{ msg[0] }}</div>
+              <div style="">{{ msg[1] }}</div>
+              <div style="">{{ msg[2] }}</div>
+              <div style="">{{ msg[3] }}</div>
               <div class="bottom clearfix">
                 <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button">操作按钮</el-button>
+                <el-button type="text" class="button">更多</el-button>
               </div>
             </div>
           </el-card>
@@ -51,18 +68,55 @@
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/mz1.png"
-  import show2 from "@/assets/images/mz2.jpg"
-  import ElRow from "element-ui/packages/row/src/row";
+  import show1 from "@/assets/images/sa-flag-slogo.jpg"
+  import show2 from "@/assets/images/cooperation.jpg"
 
   export default {
-    components: {ElRow},
+    components: {},
     data() {
-
+      let visaMsgs = [
+        [
+          "南非注册结婚以及南非外交部公证认证",
+          "南非小孩出生证明以及外交部公证认证",
+          "南非无犯罪等证件",
+          "南非未入籍以及退籍申请"],
+        [
+          "南非永久居留PR申请，ID 申请",
+          "贴纸转贴",
+          "学生签证、陪伴签证、退休签证、商务考察签证延期",
+          "南非申请美国10年多次往返签证"],
+        [
+          "进出关南非有逾期,滞留问题解决",
+          "进出关口签证类疑难杂症解决",
+          "为客户签证进出关南非保驾护航",
+          "为商品进出关南非保驾护航"
+        ]
+      ]
+      let accountMsgs = [
+        [
+          "对市场进入战略和投资结构的策划",
+          "跨境及南非的税务筹划,申报",
+          "兼并和收购有关的税务筹划",
+          "税务知识培训"],
+        [
+          "记账",
+          "管理报告",
+          "对员工和管理人员提供南非会计准则遵循培训",
+          "外部审计支持"
+        ],
+        [
+          "内部审计",
+          "公司风险管理",
+          "人力资源管理",
+          "劳工法律咨询"
+        ]
+      ]
       return {
         images: [show1, show2],
         screenHeight: window.innerHeight,
-        currentDate: new Date()
+        currentDate: new Date(),
+        visaMsgLst: visaMsgs,
+        accountMsgLst: accountMsgs
       }
     },
     mounted: function () {
@@ -77,7 +131,7 @@
       };
     },
     methods: {
-      goto : function (item) {
+      goto: function (item) {
         //this.$router.push("/visa_service")
         window.open("http://localhost:8080/#/visa_service")
       }
@@ -136,5 +190,11 @@
 
   .clearfix:after {
     clear: both
+  }
+
+  .mybox-text:hover {
+    color: #4c4c4c;
+  / / text-shadow: 0 px 0 px red;
+    font-weight: bold;
   }
 </style>

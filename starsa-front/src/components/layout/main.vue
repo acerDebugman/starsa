@@ -10,18 +10,44 @@
                style="height:100%;align-content: center;"
                @select="handleSelect">
         <el-menu-item index="/home_service">
-          <img :src="dlogo" style="height: auto; width: auto;"/>
+          <img :src="xstarlogo" style="position:relative; top:20px; height: auto; width: auto;"/>
         </el-menu-item>
-        <el-menu-item index="/visa_service">解决方案</el-menu-item>
-        <el-menu-item index="/account_service">新闻与洞察</el-menu-item>
-        <el-menu-item index="/value_add_service">营销科学院</el-menu-item>
-        <el-menu-item index="/about_us">关于我们</el-menu-item>
-        <el-menu-item index="/chinese" style="padding:0px 40px 0px 0px;float: right">中文
+        <el-menu-item index="/visa_service">
+          <div class="mytitle">
+            签证类服务
+          </div>
+          <div class="mybottom-line"
+               style="position:relative;top: 15px;width:40%; border-top: 1px solid #fff"></div>
         </el-menu-item>
-        <el-menu-item :index="currentPath" style="padding:0px 3px 0px 3px;float: right">|
+        <el-menu-item index="/account_service">
+          <div class="mytitle">
+            会计类服务
+          </div>
+        </el-menu-item>
+        <el-menu-item index="/value_add_service">
+          <div class="mytitle">
+            增值服务
+          </div>
+        </el-menu-item>
+        <el-menu-item index="/about_us">
+          <div class="mytitle">
+            关于我们
+          </div>
+        </el-menu-item>
+        <el-menu-item index="/chinese" style="padding:0px 40px 0px 0px;float: right">
+          <div class="mytitle">
+            中文
+          </div>
+        </el-menu-item>
+        <el-menu-item :index="currentPath" style="padding:0px 3px 0px 3px;float: right">
+          <div class="mytitle">
+            |
+          </div>
         </el-menu-item>
         <el-menu-item index="/english" style="padding:0px 0px 20px 20px;float: right;">
-          English
+          <div class="mytitle">
+            English
+          </div>
         </el-menu-item>
       </el-menu>
     </el-header>
@@ -35,35 +61,37 @@
       </div>
     </el-main>
     <el-footer style="">
-
-
       <div style="border-bottom: 1px solid #ccc;margin:0"></div>
       <div style="width:87%;margin:30px auto;">
         <div style="overflow: hidden;margin: 0 auto;padding: 0;height:440px">
           <div style="float:left;height:100%; border:0px solid #f00;width:20%">
-            <p class="footer-title">MiaoZhen</p>
-            <p>关于秒针</p>
-            <p>
-              <router-link to="visa_service">
-                kkk
-              </router-link>
+            <p class="footer-title" style="position:relative;top:-20px">
+              <img :src="xstarfooter" style="opacity:0.7;"/>
             </p>
             <p>
-            <router-link to="visa_service">
-              zhang joe
-            </router-link>
+              <router-link to="visa_service" style="color:#ccc">
+                关于新星国际
+              </router-link>
             </p>
           </div>
           <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
-            <p class="footer-title">产品&解决方案</p>
-            <p>关于秒针</p>
+            <p class="footer-title">产品服务</p>
+            <p>签证及商务服务</p>
+            <p>会计类服务</p>
+            <p>增值服务</p>
           </div>
           <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
             <p class="footer-title">热门问题</p>
+            <p>南非永久居留PR申请</p>
+            <p>陪伴签证,退休签证,商务考察签证延期</p>
+            <p>跨境及南非的税务筹划,申报</p>
+            <p>劳工法律咨询</p>
           </div>
           <div style="float: left; height:90%; border:0px solid #f00; width:40%;">
-            <p class="footer-title">logo</p>
-            <a target="_blank" href="http://weibo.com/miaozhensystems" class="sina1">joe</a>
+             <p class="footer-title">关于我们</p>
+             <p>公司简介</p>
+             <p>团队介绍</p>
+            <!-- <a target="_blank" href="http://weibo.com/miaozhensystems" class="sina1">joe</a> -->
           </div>
         </div>
         <div style="border-bottom: 1px solid #808080;margin:0"></div>
@@ -76,7 +104,8 @@
   </el-container>
 </template>
 <script>
-  import dlogo from "@/assets/images/mzlogo.png"
+  import xstarlogo from "@/assets/images/transparent-logo.png"
+  import xstarfooter from "@/assets/images/footer.png"
 
   export default  {
     name: "main",
@@ -88,7 +117,8 @@
         usage_info: "www.baidu.com",
         activeIndex: '1',
         activeIndex2: '1',
-        dlogo: dlogo,
+        xstarlogo: xstarlogo,
+        xstarfooter: xstarfooter,
         currentPath: "/home_service"
       }
     },
@@ -162,4 +192,14 @@
     font-size: 24px;
     color: #ccc;
   }
+
+  .mybottom-line:hover {
+    border-top: 1px solid #f00;
+  }
+
+  .mytitle {
+    position: relative;
+    top: 20px;
+  }
+
 </style>

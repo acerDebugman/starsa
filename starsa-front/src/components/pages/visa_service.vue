@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/mz1.png"
+  import show1 from "@/assets/images/sa-flag.jpg"
   import show2 from "@/assets/images/mz2.jpg"
   import ElRow from "element-ui/packages/row/src/row";
 
