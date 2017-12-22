@@ -39,7 +39,7 @@
 
   .el-menu--horizontal {
     border-right: none;
-    border-bottom: solid 0px #e6e6e6;
+    border-bottom: solid 0px #e6e6e6 !important;
   }
 
   #app {
