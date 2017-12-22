@@ -28,13 +28,13 @@
   }
 
   .el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
-    border-bottom: 0px solid #F9591E;
+    border-bottom: 0px solid #F9591E !important;
     background-color: transparent !important;
     color: #2d2f33;
   }
 
   .el-menu--horizontal .el-menu-item {
-    border-bottom: 0px solid #F9591E;
+    border-bottom: 0px solid #F9591E !important;
   }
 
   .el-menu--horizontal {
