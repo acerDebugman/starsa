@@ -194,7 +194,7 @@
 
   .mybox-text:hover {
     color: #4c4c4c;
-  / / text-shadow: 0 px 0 px red;
+  // text-shadow: 0 px 0 px red;
     font-weight: bold;
   }
 </style>
