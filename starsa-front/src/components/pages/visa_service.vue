@@ -1,36 +1,160 @@
 <template>
-
   <div class="block">
-    <el-carousel id="show-img" height="100%">
-      <el-carousel-item v-for="item in images" :key="item">
-        <a href="visa_service" target="_blank">
-          <img :src="item" style="height: 100%;width: 100%;"/>
-        </a>
-      </el-carousel-item>
-    </el-carousel>
-    <div>
-      joe zhang
+    <div id="show-img">
+      <img :src="images[0]" style="height: 100%;width: 100%;"/>
+    </div>
+    <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
+        <div style="float: left; margin-top: 1%;margin-left: 20px">
+          <h1>{{ msg_visa_doc[0] }}</h1>
+          <h1>{{ msg_visa_doc[1] }}</h1>
+          <h1>{{ msg_visa_doc[2] }}</h1>
+          <h1>{{ msg_visa_doc[3] }}</h1>
+        </div>
+      </el-row>
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <div style="float: left; margin-top: 1%;margin-left: 20px">
+          <h1>{{ msg_visa_apply[0] }}</h1>
+          <h1>{{ msg_visa_apply[1] }}</h1>
+          <h1>{{ msg_visa_apply[2] }}</h1>
+          <h1>{{ msg_visa_apply[3] }}</h1>
+        </div>
+      </el-row>
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
+        <div style="float: left; margin-top: 1%;margin-left: 20px">
+          <h1>{{ boundary_port[0] }}</h1>
+          <h1>{{ boundary_port[1] }}</h1>
+          <h1>{{ boundary_port[2] }}</h1>
+        </div>
+      </el-row>
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <div style="float: left; margin-top: 1%;margin-left: 20px">
+          <h1>{{ beijing_office[0] }}</h1>
+          <h4>{{ beijing_office[1] }}</h4>
+          <h1>{{ beijing_office[2] }}</h1>
+          <h4>{{ beijing_office[3] }}</h4>
+          <h1>{{ beijing_office[4] }}</h1>
+          <h4>{{ beijing_office[5] }}</h4>
+          <h4>{{ beijing_office[6] }}</h4>
+        </div>
+      </el-row>
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[4] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="betty_ch" style="height: auto; width: auto; float: left; margin-right: 10px"/>
+        <span>
+          <h3>{{ one_belt_one_road[0] }}</h3>
+          <h3>{{ one_belt_one_road[1] }}</h3>
+        </span>
+      </el-row>
     </div>
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/sa-flag.jpg"
-  import show2 from "@/assets/images/mz2.jpg"
+  import show1 from "@/assets/images/visa-banner4.png"
+  import betty_en from "@/assets/images/card-betty-en.png"
+  import betty_ch from "@/assets/images/card-betty-ch.png"
 
   export default {
     components: {},
     data() {
+      let msg_title = ["签证资料服务",
+                       "签证类服务",
+                       "进出关问题",
+                       "北京办事处服务",
+                       "一带一路商务洽谈"]
+
+      let msg_title_en = ["X-STAR VISA SOLUTIONS",
+                          "X-STAR VISA SOLUTIONS",
+                          "X-STAR VISA SOLUTIONS",
+                          "X-STAR VISA SOLUTIONS",
+                          "X-STAR VISA SOLUTIONS"]
+
+      let msg_visa_doc = ["南非注册结婚以及南非外交部公证认证",
+                          "南非小孩出生证明以及外交部公证认证",
+                          "南非无犯罪等",
+                          "南非未入籍以及退籍申请"]
+
+      let msg_visa_apply = ["南非永久居留PR申请，ID 申请",
+                            "学生签证,陪伴签证,退休签证,商务考察签证延期",
+                            "贴纸转贴",
+                            "南非申请美国10年多次往返签证"]
+
+      let boundary_port = ["进出关南非逾期滞留",
+                           "进出关口签证类任何疑难杂症",
+                           "为客户进出关南非保驾护航"]
+
+      let beijing_office = [
+        "南非短期签证：",
+        "旅游,探亲,访友,商务考察,金砖五国10年高管签证等",
+        "南非长期签证：",
+        "4年内部调动签,陪伴签,学生签证,退休签证,集团签证,投资移民签证等",
+        "非洲周边其他国家签证：",
+        "纳米比亚,马拉维,博兹瓦纳,埃塞俄比亚,莱索托,刚果金,刚果布,加纳,赞比亚,",
+        "津巴布韦等",
+      ]
+
+      let one_belt_one_road = [
+        "协助天津市医疗器械商会、中国国际贸易促进委员会（天津分会）以及天津市高新技术" +
+        "产业园区管委会邀请南非驻中国大使馆经济处公使衔参赞Charles Manuel 及其秘书进行贸促会，促进双边贸易" ,
+        "接待国内到南非各商务考察团，按客户要求策划举办相应会议及活动，" +
+        "并协助邀请中国驻南非使领馆官员以及南非国一定级别领导（含副总统及总统）出席参与。"
+      ]
 
       return {
-        images: [show1, show2],
-        screenHeight: window.innerHeight
+        images: [show1],
+        screenHeight: window.innerHeight,
+        betty_en: betty_en,
+        betty_ch: betty_ch,
+        msg_visa_doc: msg_visa_doc,
+        msg_visa_apply: msg_visa_apply,
+        msg_title: msg_title,
+        msg_title_en: msg_title_en,
+        boundary_port: boundary_port,
+        beijing_office: beijing_office,
+        one_belt_one_road: one_belt_one_road,
       }
     },
     mounted: function () {
       console.log(this.screenHeight);
-      let h = this.screenHeight ;
+      let h = this.screenHeight / 7 * 5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
-//      document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化
       window.onresize = () => {
         return (() => {
           this.screenHeight = window.innerHeight;
@@ -40,8 +164,8 @@
     watch: {
       screenHeight: function (val) {
         this.screenHeight = val;
-        let h = this.screenHeight ;
-        document.getElementById('show-img').style.height = h + "px";//检测窗口的大小，并赋值
+        let h = this.screenHeight;
+//        document.getElementById('show-img').style.height = h + "px";//检测窗口的大小，并赋值
       }
     }
   }

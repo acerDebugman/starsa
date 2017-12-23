@@ -1,34 +1,89 @@
 <template>
 
   <div class="block">
-    <el-carousel id="show-img" height="100%">
-      <el-carousel-item v-for="item in images" :key="item">
-        <a href="visa_service" target="_blank">
-          <img :src="item" style="height: 100%;width: 100%;"/>
-        </a>
-      </el-carousel-item>
-    </el-carousel>
-    <div>
-      joe zhang
+    <div id="show-img">
+      <img :src="about_us" style="height: 100%;width: 100%;"/>
+    </div>
+    <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
+          <img :src="betty_ch" style="height: auto; width: auto; "/>
+        </div>
+        <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
+          <h1>{{ personal_name[0] }}</h1>
+          <div>{{ personal_info[0] }}</div>
+        </div>
+      </el-row>
+      <!----  --->
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
+          <img :src="betty_ch" style="height: auto; width: auto; "/>
+        </div>
+        <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
+          <h1>{{ personal_name[1] }}</h1>
+          <div>{{ personal_info[1] }}</div>
+        </div>
+      </el-row>
     </div>
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/sa-flag.jpg"
-  import show2 from "@/assets/images/mz2.jpg"
+  import betty_en from "@/assets/images/card-betty-en.png"
+  import betty_ch from "@/assets/images/card-betty-ch.png"
+  import about_us from "@/assets/images/about-us-banner2.png"
 
   export default {
     components: {},
     data() {
-
+      let msg_title = [
+        "公司发展史",
+        "签证商务部负责人介绍",
+        "会计部负责人介绍",
+      ]
+      let msg_title_en = [
+        "Company History",
+        "Visa Service Manager",
+        "Accounting Service Manager"
+      ]
+      let personal_name = [
+        "王婷婷",
+        "谢浩林",
+      ]
+      let personal_info = [
+        "毕业于北京交通大学，工商管理专业学士学位。在南非有8年的签证服务经验。专攻南非各类签证，" +
+        "解决在南非的企业及个人签证的疑难杂症，并与南非当地的移民总局和南非驻北京大使馆有着良好的关系。" +
+        "同时也是南非钻石红（酒业）有限公司、南非钻石红（天津）酒业有限公司的海外项目总监。",
+        "南非注册税务师。南非注册商业会计师。中国会计资格证。南非税务协会会员。毕业于澳大利亚悉尼大学，" +
+        "拥有会计硕士和金融硕士双学位。在南非有7年的财务工作经验。专门从事做账报税业务。" +
+        "在加入我们公司之前一直在南非当地会计师事务所负责中国业务，熟悉中国客户的需求.目前在我们公司负责税务以及市场业务。"
+      ]
       return {
-        images: [show1, show2],
-        screenHeight: window.innerHeight
+        about_us: about_us,
+        msg_title: msg_title,
+        msg_title_en: msg_title_en,
+        personal_info: personal_info,
+        screenHeight: window.innerHeight,
+        personal_name: personal_name,
+        personal_info: personal_info,
+        betty_ch: betty_ch,
+        betty_en: betty_en,
       }
     },
     mounted: function () {
       console.log(this.screenHeight);
-      let h = this.screenHeight ;
+      let h = this.screenHeight / 7 * 5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
 //      document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化
       window.onresize = () => {
@@ -40,7 +95,7 @@
     watch: {
       screenHeight: function (val) {
         this.screenHeight = val;
-        let h = this.screenHeight ;
+        let h = this.screenHeight;
         document.getElementById('show-img').style.height = h + "px";//检测窗口的大小，并赋值
       }
     }

@@ -21,7 +21,7 @@
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
             <div style="height:300px;overflow-y: hidden">
-              <img :src="require('@/assets/images/visa-sub1.jpg')" class="image">
+              <img :src="visasub[index]" class="image">
             </div>
             <div class="mybox-text" style="padding: 14px;">
               <el-row>{{ obj[0] }}</el-row>
@@ -70,6 +70,9 @@
 <script>
   import show1 from "@/assets/images/sa-flag-slogo.jpg"
   import show2 from "@/assets/images/cooperation.jpg"
+  import visasub1 from "@/assets/images/visa-sub1.jpg"
+  import visasub2 from "@/assets/images/visa-sub2.png"
+  import visasub3 from "@/assets/images/visa-sub3.jpg"
 
   export default {
     components: {},
@@ -83,7 +86,7 @@
         [
           "南非永久居留PR申请，ID 申请",
           "贴纸转贴",
-          "学生签证、陪伴签证、退休签证、商务考察签证延期",
+          "学生,陪伴,退休,商务考察等签证延期",
           "南非申请美国10年多次往返签证"],
         [
           "进出关南非有逾期,滞留问题解决",
@@ -116,14 +119,14 @@
         screenHeight: window.innerHeight,
         currentDate: new Date(),
         visaMsgLst: visaMsgs,
-        accountMsgLst: accountMsgs
+        accountMsgLst: accountMsgs,
+        visasub:[visasub1,visasub2, visasub3]
       }
     },
     mounted: function () {
       console.log(this.screenHeight);
       let h = this.screenHeight;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
-//      document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化
       window.onresize = () => {
         return (() => {
           this.screenHeight = window.innerHeight;

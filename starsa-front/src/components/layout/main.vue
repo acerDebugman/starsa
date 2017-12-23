@@ -34,6 +34,7 @@
             关于我们
           </div>
         </el-menu-item>
+        <!--
         <el-menu-item index="/chinese" style="padding:0px 40px 0px 0px;float: right">
           <div class="mytitle">
             中文
@@ -49,6 +50,7 @@
             English
           </div>
         </el-menu-item>
+        -->
       </el-menu>
     </el-header>
     <el-main id="segment-main"
