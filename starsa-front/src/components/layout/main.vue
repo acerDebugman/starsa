@@ -66,7 +66,7 @@
       <div style="border-bottom: 1px solid #ccc;margin:0"></div>
       <div style="width:87%;margin:30px auto;">
         <div style="overflow: hidden;margin: 0 auto;padding: 0;height:440px">
-          <div style="float:left;height:100%; border:0px solid #f00;width:20%">
+          <div style="float:left;height:100%; border:0px solid #f00;width:25%">
             <p class="footer-title" style="position:relative;top:-20px">
               <img :src="xstarfooter" style="opacity:0.7;"/>
             </p>
@@ -76,20 +76,13 @@
               </router-link>
             </p>
           </div>
-          <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
+          <div style="float:left; height:90%; border:0px solid #f00; width:25%;">
             <p class="footer-title">产品服务</p>
             <p>签证及商务服务</p>
             <p>会计类服务</p>
             <p>增值服务</p>
           </div>
-          <div style="float:left; height:90%; border:0px solid #f00; width:20%;">
-            <p class="footer-title">热门问题</p>
-            <p>南非永久居留PR申请</p>
-            <p>陪伴签证,退休签证,商务考察签证延期</p>
-            <p>跨境及南非的税务筹划,申报</p>
-            <p>劳工法律咨询</p>
-          </div>
-          <div style="float: left; height:90%; border:0px solid #f00; width:40%;">
+          <div style="float: left; height:90%; border:0px solid #f00; width:50%;">
              <p class="footer-title">关于我们</p>
              <p>公司简介</p>
              <p>团队介绍</p>
