@@ -3,6 +3,11 @@
   <div class="block">
     <div id="show-img">
       <img :src="about_us" style="height: 100%;width: 100%;"/>
+      <div class="my_dialog">
+        <div class="my_dialog_title">{{ dialog_title }}</div>
+        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        </div>
+      </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
@@ -36,7 +41,7 @@
           <div>{{ personal_info[0] }}</div>
         </div>
       </el-row>
-            <!----  --->
+      <!----  --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ msg_title[2] }}</p>
@@ -91,11 +96,19 @@
         "在加入我们公司之前一直在南非当地会计师事务所负责中国业务，熟悉中国客户的需求.目前在我们公司负责税务以及市场业务。"
       ]
       let company_info = [
-          "本公司成立于1999年，是一家专业安排各种会议和接待公务、商务团组的南非商务公司，系南非旅游协会SATSA的成员。" +
-          "业务范围包括：在南非组织召开各类说明会、咨询会、商务对接会和座谈会等各类会议。" +
-          "为来自亚洲各国的团组定制南非、津巴布韦、肯尼亚和埃及等国的行程，代订酒店，安排交通和导游服务。" +
-          "协助团组办理商务签证和安排考察活动。 "
+        "本公司成立于1999年，是一家专业安排各种会议和接待公务、商务团组的南非商务公司，系南非旅游协会SATSA的成员。" +
+        "业务范围包括：在南非组织召开各类说明会、咨询会、商务对接会和座谈会等各类会议。" +
+        "为来自亚洲各国的团组定制南非、津巴布韦、肯尼亚和埃及等国的行程，代订酒店，安排交通和导游服务。" +
+        "协助团组办理商务签证和安排考察活动。 "
       ]
+
+      let dialog_content = [
+        "新星国际 X-star International Pty Ltd",
+        "REG:2012/199515/07",
+        "26 ERNEST OPPENHEIMER STREET ,VASCO DA GAMA HOUSE, BRUMA 2026",
+        "Email: "
+      ]
+
       return {
         about_us: about_us,
         msg_title: msg_title,
@@ -108,6 +121,8 @@
         company_info: company_info,
         betty_ch: betty_ch,
         betty_en: betty_en,
+        dialog_content: dialog_content,
+        dialog_title: "关于我们"
       }
     },
     mounted: function () {

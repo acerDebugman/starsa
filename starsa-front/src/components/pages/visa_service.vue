@@ -2,6 +2,11 @@
   <div class="block">
     <div id="show-img">
       <img :src="images[0]" style="height: 100%;width: 100%;"/>
+      <div class="my_dialog">
+        <div class="my_dialog_title">{{ dialog_title }}</div>
+        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        </div>
+      </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
@@ -132,7 +137,7 @@
 
       let one_belt_one_road = [
         "协助天津市医疗器械商会、中国国际贸易促进委员会（天津分会）以及天津市高新技术" +
-        "产业园区管委会邀请南非驻中国大使馆经济处公使衔参赞Charles Manuel 及其秘书进行贸促会，促进双边贸易" ,
+        "产业园区管委会邀请南非驻中国大使馆经济处公使衔参赞Charles Manuel 及其秘书进行贸促会，促进双边贸易",
         "接待国内到南非各商务考察团，按客户要求策划举办相应会议及活动，" +
         "并协助邀请中国驻南非使领馆官员以及南非国一定级别领导（含副总统及总统）出席参与。"
       ]
@@ -149,6 +154,8 @@
         boundary_port: boundary_port,
         beijing_office: beijing_office,
         one_belt_one_road: one_belt_one_road,
+        dialog_content: msg_title,
+        dialog_title: "签证类服务"
       }
     },
     mounted: function () {

@@ -3,6 +3,11 @@
   <div class="block">
     <div id="show-img">
       <img :src="value_add_banner" style="height: 100%;width: 100%;"/>
+      <div class="my_dialog">
+        <div class="my_dialog_title">{{ dialog_title }}</div>
+        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        </div>
+      </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
@@ -91,11 +96,11 @@
     components: {},
     data() {
       let msg_title = [
-        "为中国公司在南非投资经营提供服务",
-        "为中国公司在南非投资提供财务,税务,劳务咨询以及税务筹划工作",
-        "为中国公司在南非收购和投资提供财务,税务服务和税收筹划",
-        "为中国公司在南非的子公司提供报表合并支持以及提供用中国会计软件记账业务",
-        "对在南非的中国公司提供Public Officer 业务",
+        "为客户在南非投资经营提供咨询服务",
+        "为客户在南非投资提供财务,税务,劳务咨询,税务筹划等服务",
+        "为客户在南非收购和投资提供财务,税务服务和税收筹划",
+        "为客户在南非的子公司提供报表合并,提供用中国会计软件记账业务",
+        "对在南非的中国公司提供Public Officer业务",
       ]
       let msg_title_en = [
         "X-STAR VALUE-ADDED SOLUTIONS",
@@ -106,10 +111,10 @@
       ]
 
       let msg_value_add = [
-          "我们公司充分利用在南非丰富的服务经验、人力资源和广阔的关系，我们以合理的成本、" +
-          "高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目。我们的客户主要为在南非的中资企业。" +
-          "客户设计行业包括，建筑，矿业，旅游业，零售，高科技等。为了客户信息保密，以下是我们其中一些客户的简单介绍。" +
-          "客户名字不会直接出现。"
+        "我们公司充分利用在南非丰富的服务经验、人力资源和广阔的关系，我们以合理的成本、" +
+        "高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目。我们的客户主要为在南非的中资企业。" +
+        "客户设计行业包括，建筑，矿业，旅游业，零售，高科技等。为了客户信息保密，以下是我们其中一些客户的简单介绍。" +
+        "客户名字不会直接出现。"
       ]
 
       let msg_value_add1 = [
@@ -165,6 +170,8 @@
         msg_value_add2: msg_value_add2,
         msg_value_add3: msg_value_add3,
         msg_value_add4: msg_value_add4,
+        dialog_content: msg_title,
+        dialog_title: "增值类服务"
       }
     },
     mounted: function () {

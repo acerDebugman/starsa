@@ -5,6 +5,10 @@
       <el-carousel-item v-for="(item, index) in images" :key="item">
         <router-link :to="service_addr[index]" style="cursor:pointer" >
           <img :src="item" style="height: 100%;width: 100%;"/>
+          <div class="my_dialog">
+            <div class="my_dialog_title">{{ dialog_title[index] }}</div>
+            <div class="my_dialog_content" v-for="msg_item in dialog_content[index]">{{ msg_item }}</div>
+          </div>
         </router-link>
       </el-carousel-item>
     </el-carousel>
@@ -87,7 +91,7 @@
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(msg, index) in accountMsgLst" :key="msg[index]"
+        <el-col :span="6" v-for="(msg, index) in value_add_msgs " :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
@@ -178,6 +182,24 @@
         ]
       ]
 
+      let value_add_msgs = [
+          [
+              "公司充分利用在南非丰富的服务经验," ,
+              "人力资源和广阔的关系,我们以合理的成本," ,
+              "高质量和高速度的服务帮助客户完成南非跨境项目"
+          ] ,
+          [
+              "我们的客户主要为在南非的中资企业." ,
+              "客户设计行业包括,建筑,矿业,旅游业,零售,高科技等" ,
+              "竭诚为中国公司在南非投资经营提供服务"
+          ] ,
+          [
+              "为客户在南非投资提供财务,税务,劳务咨询等筹划工作",
+              "为客户在南非的子公司提供报表合并,记账等业务" ,
+              "对在南非的中国公司提供Public Officer业务"
+          ] ,
+      ]
+
       let service_addr = [
           "/visa_service" ,
           "/accounting_service" ,
@@ -186,6 +208,29 @@
 
       let current_time = new Date().toLocaleDateString()
 
+      let dialog_title = [
+        "签证类服务",
+        "会计类服务",
+        "增值服务"
+      ]
+      let dialog_content = [
+          [
+              "南非注册结婚以及南非外交部公证认证",
+              "南非永久居留PR申请，ID 申请",
+              "学生,陪伴,退休,商务考察等签证延期",
+              "进出关南非有逾期,滞留问题解决",
+        ],[
+              "对市场进入战略和投资结构的策划",
+              "跨境及南非的税务筹划,申报",
+              "人力资源管理",
+              "劳工法律咨询",
+              "对员工和管理人员提供南非会计准则遵循培训",
+        ],[
+              "我们公司充分利用在南非丰富的服务经验,人力资源和广阔的关系," +
+              "我们以合理的成本,高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目." ,
+              "我们的客户主要为在南非的中资企业.客户设计行业包括,建筑,矿业,旅游业,零售,高科技等"
+        ]
+      ]
       return {
         images: [show1, show2, show3],
         msg_title: msg_title,
@@ -194,10 +239,13 @@
         currentDate: current_time,
         visaMsgLst: visaMsgs,
         accountMsgLst: accountMsgs,
+        value_add_msgs: value_add_msgs,
         visasub: [visasub1, visasub2, visasub3],
         accounting_sub: [accounting_sub1, accounting_sub2, accounting_sub3],
         value_add: [value_add_sub1, value_add_sub2, value_add_sub3],
         service_addr: service_addr,
+        dialog_title: dialog_title,
+        dialog_content: dialog_content,
       }
     },
     mounted: function () {
@@ -279,4 +327,7 @@
   / / text-shadow: 0 px 0 px red;
     font-weight: bold;
   }
+
+
+
 </style>

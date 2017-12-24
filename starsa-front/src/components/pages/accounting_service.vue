@@ -2,6 +2,11 @@
   <div class="block" style="overflow: hidden;">
     <div id="show-img">
       <img :src="accounting_banner" style="height: 100%;width: 100%;"/>
+      <div class="my_dialog">
+        <div class="my_dialog_title">{{ dialog_title }}</div>
+        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        </div>
+      </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
@@ -141,6 +146,8 @@
         accounting_report: accounting_report,
         accounting_secretary: accounting_secretary,
         human_resource: human_resource,
+        dialog_content: msg_title,
+        dialog_title: "会计类服务"
       }
     },
     mounted: function () {

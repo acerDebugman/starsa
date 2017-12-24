@@ -36,9 +36,10 @@
             关于我们
           </div>
         </el-menu-item>
-        <el-menu-item index="/contact_us" style="margin-right:100px;padding:0px 40px 0px 0px;float: right">
+        <el-menu-item index="/contact_us"
+                      style="margin-right:100px;padding:0px 40px 0px 0px;float: right">
           <div class="mytitle">
-           联系我们
+            联系我们
           </div>
         </el-menu-item>
         <!--
@@ -230,4 +231,30 @@
     top: 20px;
   }
 
+  .my_dialog {
+    position: absolute;
+    z-index: 3;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    border: 0px solid #f00;
+    top: 200px;
+    left: 80px;
+    width: 600px;
+    height: 300px;
+    line-height: 30px !important;
+    opacity: 1 !important;
+  }
+
+  .my_dialog_title {
+    line-height: 40px !important;
+    font-weight: 900;
+    font-size: xx-large;
+    margin-bottom: 20px;
+  }
+
+  .my_dialog_content {
+    line-height: 30px !important;
+    font-size: x-large;
+  }
 </style>
