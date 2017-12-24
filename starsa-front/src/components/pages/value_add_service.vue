@@ -3,7 +3,7 @@
   <div class="block">
     <div id="show-img">
       <img :src="value_add_banner" style="height: 100%;width: 100%;"/>
-      <div class="my_dialog">
+      <div class="my_dialog" style="width: 720px">
         <div class="my_dialog_title">{{ dialog_title }}</div>
         <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
         </div>

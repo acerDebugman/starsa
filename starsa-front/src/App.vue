@@ -23,10 +23,10 @@
     -moz-osx-font-smoothing: grayscale;
     color: #333333;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     background: #fcfcfc ;
-    min-width: 1300px;
-    min-height: 700px;
+    min-width: 1300px !important;
+    min-height: 700px !important;
   }
 
   .el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
