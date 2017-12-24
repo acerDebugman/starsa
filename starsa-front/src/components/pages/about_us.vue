@@ -143,7 +143,7 @@
       screenHeight: function (val) {
         this.screenHeight = val;
         let h = this.screenHeight;
-        document.getElementById('show-img').style.height = h + "px";//检测窗口的大小，并赋值
+//        document.getElementById('show-img').style.height = h + "px";//检测窗口的大小，并赋值
       }
     }
   }
