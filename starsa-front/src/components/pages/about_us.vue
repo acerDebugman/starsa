@@ -104,9 +104,12 @@
 
       let dialog_content = [
         "新星国际 X-star International Pty Ltd",
-        "REG:2012/199515/07",
-        "26 ERNEST OPPENHEIMER STREET ,VASCO DA GAMA HOUSE, BRUMA 2026",
-        "Email: "
+        "REG: 2012/199515/07",
+        "公司地址: 26 ERNEST OPPENHEIMER STREET,VASCO DA GAMA HOUSE, BRUMA 2026",
+        "公司微信： 1060151666(签证服务)  saminxhl(会计服务)" ,
+        "南非联系电话: 0782763881  Betty 王",
+        "会计师联系电话: 0846428984  Sam 谢",
+        "南非Office电话: 011 0396355",
       ]
 
       return {
