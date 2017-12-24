@@ -144,7 +144,7 @@
       }
     },
     mounted: function () {
-      console.log(this.screenHeight);
+//      console.log(this.screenHeight);
       let h = this.screenHeight / 7 * 5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
 //      document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化

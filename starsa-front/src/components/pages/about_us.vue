@@ -32,6 +32,7 @@
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
           <h1>{{ personal_name[0] }}</h1>
+          <h5>{{ personal_name_en[0] }}</h5>
           <div>{{ personal_info[0] }}</div>
         </div>
       </el-row>
@@ -48,6 +49,7 @@
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
           <h1>{{ personal_name[1] }}</h1>
+          <h5>{{ personal_name_en[1] }}</h5>
           <div>{{ personal_info[1] }}</div>
         </div>
       </el-row>
@@ -76,6 +78,10 @@
         "王婷婷",
         "谢浩林",
       ]
+      let personal_name_en = [
+        "Betty",
+        "Sam",
+      ]
       let personal_info = [
         "毕业于北京交通大学，工商管理专业学士学位。在南非有8年的签证服务经验。专攻南非各类签证，" +
         "解决在南非的企业及个人签证的疑难杂症，并与南非当地的移民总局和南非驻北京大使馆有着良好的关系。" +
@@ -97,6 +103,7 @@
         personal_info: personal_info,
         screenHeight: window.innerHeight,
         personal_name: personal_name,
+        personal_name_en: personal_name_en,
         personal_info: personal_info,
         company_info: company_info,
         betty_ch: betty_ch,
@@ -104,7 +111,7 @@
       }
     },
     mounted: function () {
-      console.log(this.screenHeight);
+//      console.log(this.screenHeight);
       let h = this.screenHeight / 7 * 5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
 //      document.getElementById('segment-main-container').style.minHeight = h - 95 + "px";//页面初始化

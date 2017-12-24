@@ -16,10 +16,12 @@
           <div class="mytitle">
             签证类服务
           </div>
+          <!--
           <div class="mybottom-line"
-               style="position:relative;top: 15px;width:40%; border-top: 1px solid #fff"></div>
+               style="position:relative;top: 15px;width:40%; border-top: 1px solid #fff;"></div>
+          -->
         </el-menu-item>
-        <el-menu-item index="/account_service">
+        <el-menu-item index="/accounting_service">
           <div class="mytitle">
             会计类服务
           </div>
@@ -32,6 +34,11 @@
         <el-menu-item index="/about_us">
           <div class="mytitle">
             关于我们
+          </div>
+        </el-menu-item>
+        <el-menu-item index="/contact_us" style="margin-right:100px;padding:0px 40px 0px 0px;float: right">
+          <div class="mytitle">
+           联系我们
           </div>
         </el-menu-item>
         <!--
@@ -71,21 +78,47 @@
               <img :src="xstarfooter" style="opacity:0.7;"/>
             </p>
             <p>
-              <router-link to="visa_service" style="color:#ccc">
-                关于新星国际
+              <router-link to="visa_service"
+                           style="text-decoration:none; color:#ccc;color: inherit">
+                新星国际 X-STARSA Internal Cooperation
               </router-link>
             </p>
           </div>
           <div style="float:left; height:90%; border:0px solid #f00; width:25%;">
             <p class="footer-title">产品服务</p>
-            <p>签证及商务服务</p>
-            <p>会计类服务</p>
-            <p>增值服务</p>
+            <p>
+              <router-link to="/visa_service" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                签证类服务
+              </router-link>
+            </p>
+            <p>
+              <router-link to="/accounting_service" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                会计类服务
+              </router-link>
+            </p>
+            <p>
+              <router-link to="/value_add_service" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                增值服务
+              </router-link>
+            </p>
           </div>
           <div style="float: left; height:90%; border:0px solid #f00; width:50%;">
-             <p class="footer-title">关于我们</p>
-             <p>公司简介</p>
-             <p>团队介绍</p>
+            <p class="footer-title">关于我们</p>
+            <p>
+              <router-link to="/about_us" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                公司简介
+              </router-link>
+            </p>
+            <p>
+              <router-link to="/about_us" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                团队介绍
+              </router-link>
+            </p>
             <!-- <a target="_blank" href="http://weibo.com/miaozhensystems" class="sina1">joe</a> -->
           </div>
         </div>
@@ -118,11 +151,11 @@
       }
     },
     mounted: function () {
-      console.log(window.innerHeight);
+//      console.log(window.innerHeight);
     },
     methods: {
       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+//        console.log(key, keyPath);
         this.currentPath = key
       }
     },

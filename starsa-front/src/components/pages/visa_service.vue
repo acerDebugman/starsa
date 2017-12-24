@@ -152,7 +152,7 @@
       }
     },
     mounted: function () {
-      console.log(this.screenHeight);
+//      console.log(this.screenHeight);
       let h = this.screenHeight / 7 * 5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
       window.onresize = () => {

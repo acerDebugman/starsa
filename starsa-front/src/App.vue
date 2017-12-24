@@ -25,6 +25,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     background: #fcfcfc ;
+    min-width: 1300px;
+    min-height: 700px;
   }
 
   .el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
