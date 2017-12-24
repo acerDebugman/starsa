@@ -65,7 +65,7 @@
     <el-footer style="">
       <div style="border-bottom: 1px solid #ccc;margin:0"></div>
       <div style="width:87%;margin:30px auto;">
-        <div style="overflow: hidden;margin: 0 auto;padding: 0;height:440px">
+        <div style="overflow: hidden;margin: 0 auto;padding: 0;height:400px">
           <div style="float:left;height:100%; border:0px solid #f00;width:25%">
             <p class="footer-title" style="position:relative;top:-20px">
               <img :src="xstarfooter" style="opacity:0.7;"/>
@@ -90,9 +90,9 @@
           </div>
         </div>
         <div style="border-bottom: 1px solid #808080;margin:0"></div>
-        <div>
+        <div style="padding-top: 10px">
           <strong>Copyright</strong>
-          © 207 Miaozhen Systems. All Rights Reserved. 京公网安备 11010502030033号
+          © 2017 X-StarSA Systems. All Rights Reserved. 京公网安备 京ICP备17041274号-2
         </div>
       </div>
     </el-footer>
