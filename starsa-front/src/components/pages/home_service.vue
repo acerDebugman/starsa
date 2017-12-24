@@ -3,22 +3,26 @@
   <div class="block">
     <el-carousel id="show-img" height="100%">
       <el-carousel-item v-for="(item, index) in images" :key="item">
-        <router-link :to="service_addr[index]" style="cursor:pointer" >
+        <router-link :to="service_addr[index]" style="cursor:pointer">
           <img :src="item" style="height: 100%;width: 100%;"/>
           <div class="my_dialog">
             <div class="my_dialog_title">{{ dialog_title[index] }}</div>
-            <div class="my_dialog_content" v-for="msg_item in dialog_content[index]">{{ msg_item }}</div>
+            <div class="my_dialog_content" v-for="msg_item in dialog_content[index]">{{ msg_item
+              }}
+            </div>
           </div>
         </router-link>
       </el-carousel-item>
     </el-carousel>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 40px auto;">
+      <!-- visa -->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ msg_title[0] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[0] }}</span>
-          <router-link to="/visa_service" target="_blank" style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
+          <router-link to="/visa_service" target="_blank"
+                       style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
             更多
           </router-link>
         </p>
@@ -27,24 +31,28 @@
         <el-col :span="6" v-for="(obj, index) in visaMsgLst" :key="obj[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
-          <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
-            <div style="height:300px;overflow-y: hidden">
-              <img :src="visasub[index]" class="image">
-            </div>
-            <div class="mybox-text" style="padding: 14px;">
-              <el-row>{{ obj[0] }}</el-row>
-              <el-row>{{ obj[1] }}</el-row>
-              <el-row><span>{{ obj[2] }}</span></el-row>
-              <el-row>{{ obj[3] }}</el-row>
-              <div class="bottom clearfix">
-                <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button" @click="goto('/visa_service')">更多</el-button>
+          <router-link to="/visa_service" target="_blank"
+                       style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
+            <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
+              <div style="height:300px;overflow-y: hidden">
+                <img :src="visasub[index]" class="image">
               </div>
-            </div>
-          </el-card>
+              <div class="mybox-text" style="padding: 14px;">
+                <el-row>{{ obj[0] }}</el-row>
+                <el-row>{{ obj[1] }}</el-row>
+                <el-row><span>{{ obj[2] }}</span></el-row>
+                <el-row>{{ obj[3] }}</el-row>
+                <div class="bottom clearfix">
+                  <time class="time">{{ currentDate }}</time>
+                  <el-button type="text" class="button" @click="goto('/visa_service')">更多
+                  </el-button>
+                </div>
+              </div>
+            </el-card>
+          </router-link>
         </el-col>
       </el-row>
-      <!-- -->
+      <!-- accounting -->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ msg_title[1] }}</p>
@@ -60,31 +68,34 @@
         <el-col :span="6" v-for="(msg, index) in accountMsgLst" :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
-          <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
-            <div style="height: 300px;overflow-y: hidden;">
-              <img :src="accounting_sub[index]" class="image">
-            </div>
-            <div class="mybox-text" style="padding: 14px;">
-              <div style="">{{ msg[0] }}</div>
-              <div style="">{{ msg[1] }}</div>
-              <div style="">{{ msg[2] }}</div>
-              <div style="">{{ msg[3] }}</div>
-              <div class="bottom clearfix">
-                <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button" @click="goto('/accounting_service')">更多
-                </el-button>
+          <router-link to="/accounting_service" target="_blank"
+                       style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
+            <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
+              <div style="height: 300px;overflow-y: hidden;">
+                <img :src="accounting_sub[index]" class="image">
               </div>
-            </div>
-          </el-card>
+              <div class="mybox-text" style="padding: 14px;">
+                <div style="">{{ msg[0] }}</div>
+                <div style="">{{ msg[1] }}</div>
+                <div style="">{{ msg[2] }}</div>
+                <div style="">{{ msg[3] }}</div>
+                <div class="bottom clearfix">
+                  <time class="time">{{ currentDate }}</time>
+                  <el-button type="text" class="button" @click="goto('/accounting_service')">更多
+                  </el-button>
+                </div>
+              </div>
+            </el-card>
+          </router-link>
         </el-col>
       </el-row>
-      <!-- -->
+      <!-- value added-->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ msg_title[2] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[2] }}</span>
-          <router-link to="/accounting_service" target="_blank"
+          <router-link to="/value_add_service" target="_blank"
                        style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
             更多
           </router-link>
@@ -94,22 +105,25 @@
         <el-col :span="6" v-for="(msg, index) in value_add_msgs " :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
-          <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
-            <div style="height: 300px;overflow-y: hidden;">
-              <img :src="value_add[index]" class="image">
-            </div>
-            <div class="mybox-text" style="padding: 14px;">
-              <div style="">{{ msg[0] }}</div>
-              <div style="">{{ msg[1] }}</div>
-              <div style="">{{ msg[2] }}</div>
-              <div style="">{{ msg[3] }}</div>
-              <div class="bottom clearfix">
-                <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button" @click="goto('/value_add_service')">更多
-                </el-button>
+          <router-link to="/value_add_service" target="_blank"
+                       style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
+            <el-card :body-style="{ padding: '0px' }" style="height: 440px;">
+              <div style="height: 300px;overflow-y: hidden;">
+                <img :src="value_add[index]" class="image">
               </div>
-            </div>
-          </el-card>
+              <div class="mybox-text" style="padding: 14px;">
+                <div style="">{{ msg[0] }}</div>
+                <div style="">{{ msg[1] }}</div>
+                <div style="">{{ msg[2] }}</div>
+                <div style="">{{ msg[3] }}</div>
+                <div class="bottom clearfix">
+                  <time class="time">{{ currentDate }}</time>
+                  <el-button type="text" class="button" @click="goto('/value_add_service')">更多
+                  </el-button>
+                </div>
+              </div>
+            </el-card>
+          </router-link>
         </el-col>
       </el-row>
     </div>
@@ -183,27 +197,27 @@
       ]
 
       let value_add_msgs = [
-          [
-              "公司充分利用在南非丰富的服务经验," ,
-              "人力资源和广阔的关系,我们以合理的成本," ,
-              "高质量和高速度的服务帮助客户完成南非跨境项目"
-          ] ,
-          [
-              "我们的客户主要为在南非的中资企业." ,
-              "客户设计行业包括,建筑,矿业,旅游业,零售,高科技等" ,
-              "竭诚为中国公司在南非投资经营提供服务"
-          ] ,
-          [
-              "为客户在南非投资提供财务,税务,劳务咨询等筹划工作",
-              "为客户在南非的子公司提供报表合并,记账等业务" ,
-              "对在南非的中国公司提供Public Officer业务"
-          ] ,
+        [
+          "公司充分利用在南非丰富的服务经验,",
+          "人力资源和广阔的关系,我们以合理的成本,",
+          "高质量和高速度的服务帮助客户完成南非跨境项目"
+        ],
+        [
+          "我们的客户主要为在南非的中资企业.",
+          "客户设计行业包括,建筑,矿业,旅游业,零售,高科技等",
+          "竭诚为中国公司在南非投资经营提供服务"
+        ],
+        [
+          "为客户在南非投资提供财务,税务,劳务咨询等筹划工作",
+          "为客户在南非的子公司提供报表合并,记账等业务",
+          "对在南非的中国公司提供Public Officer业务"
+        ],
       ]
 
       let service_addr = [
-          "/visa_service" ,
-          "/accounting_service" ,
-          "/value_add_service" ,
+        "/visa_service",
+        "/accounting_service",
+        "/value_add_service",
       ]
 
       let current_time = new Date().toLocaleDateString()
@@ -214,21 +228,21 @@
         "增值服务"
       ]
       let dialog_content = [
-          [
-              "南非注册结婚以及南非外交部公证认证",
-              "南非永久居留PR申请，ID 申请",
-              "学生,陪伴,退休,商务考察等签证延期",
-              "进出关南非有逾期,滞留问题解决",
-        ],[
-              "对市场进入战略和投资结构的策划",
-              "跨境及南非的税务筹划,申报",
-              "人力资源管理",
-              "劳工法律咨询",
-              "对员工和管理人员提供南非会计准则遵循培训",
-        ],[
-              "我们公司充分利用在南非丰富的服务经验,人力资源和广阔的关系," +
-              "我们以合理的成本,高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目." ,
-              "我们的客户主要为在南非的中资企业.客户设计行业包括,建筑,矿业,旅游业,零售,高科技等"
+        [
+          "南非注册结婚以及南非外交部公证认证",
+          "南非永久居留PR申请，ID 申请",
+          "学生,陪伴,退休,商务考察等签证延期",
+          "进出关南非有逾期,滞留问题解决",
+        ], [
+          "对市场进入战略和投资结构的策划",
+          "跨境及南非的税务筹划,申报",
+          "人力资源管理",
+          "劳工法律咨询",
+          "对员工和管理人员提供南非会计准则遵循培训",
+        ], [
+          "我们公司充分利用在南非丰富的服务经验,人力资源和广阔的关系," +
+          "我们以合理的成本,高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目.",
+          "我们的客户主要为在南非的中资企业.客户设计行业包括,建筑,矿业,旅游业,零售,高科技等"
         ]
       ]
       return {
@@ -327,7 +341,6 @@
   / / text-shadow: 0 px 0 px red;
     font-weight: bold;
   }
-
 
 
 </style>
