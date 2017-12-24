@@ -72,9 +72,9 @@
   </div>
 </template>
 <script>
-  import accounting_banner from "@/assets/images/accounting-banner5.jpg"
-  import betty_en from "@/assets/images/card-betty-en.png"
-  import betty_ch from "@/assets/images/card-betty-ch.png"
+  import accounting_banner from "@/assets/images/accounting-banner2.jpg"
+  import betty_en from "@/assets/images/card-betty-en.jpg"
+  import betty_ch from "@/assets/images/card-betty-ch.jpg"
 
   export default {
     components: {},

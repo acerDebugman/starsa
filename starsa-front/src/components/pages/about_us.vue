@@ -55,9 +55,9 @@
   </div>
 </template>
 <script>
-  import betty_en from "@/assets/images/card-betty-en.png"
-  import betty_ch from "@/assets/images/card-betty-ch.png"
-  import about_us from "@/assets/images/about-us-banner2.png"
+  import betty_en from "@/assets/images/card-betty-en.jpg"
+  import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import about_us from "@/assets/images/about-us-banner.jpg"
 
   export default {
     components: {},

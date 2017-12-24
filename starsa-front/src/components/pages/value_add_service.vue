@@ -83,9 +83,9 @@
   </div>
 </template>
 <script>
-  import betty_en from "@/assets/images/card-betty-en.png"
-  import betty_ch from "@/assets/images/card-betty-ch.png"
-  import value_add_banner from "@/assets/images/value-add-banner.jpg"
+  import betty_en from "@/assets/images/card-betty-en.jpg"
+  import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import value_add_banner from "@/assets/images/value-add-banner2.jpg"
 
   export default {
     components: {},

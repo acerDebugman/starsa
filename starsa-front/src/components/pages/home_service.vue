@@ -68,11 +68,11 @@
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/sa-flag-slogo.jpg"
+  import show1 from "@/assets/images/sa-flag-slogo2.jpg"
   import show2 from "@/assets/images/cooperation.jpg"
-  import visasub1 from "@/assets/images/visa-sub1.jpg"
-  import visasub2 from "@/assets/images/visa-sub2.png"
-  import visasub3 from "@/assets/images/visa-sub5.png"
+  import visasub1 from "@/assets/images/visa-sub6.jpg"
+  import visasub2 from "@/assets/images/visa-sub2.jpg"
+  import visasub3 from "@/assets/images/visa-sub5.jpg"
 
   export default {
     components: {},

@@ -87,9 +87,9 @@
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/visa-banner4.png"
-  import betty_en from "@/assets/images/card-betty-en.png"
-  import betty_ch from "@/assets/images/card-betty-ch.png"
+  import show1 from "@/assets/images/visa-banner.jpg"
+  import betty_en from "@/assets/images/card-betty-en.jpg"
+  import betty_ch from "@/assets/images/card-betty-ch.jpg"
 
   export default {
     components: {},
