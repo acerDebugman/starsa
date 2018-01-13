@@ -36,9 +36,9 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
-          <h1>{{ personal_name[0] }}</h1>
-          <h5>{{ personal_name_en[0] }}</h5>
-          <div>{{ personal_info[0] }}</div>
+          <h1 style="font-size: xx-large;">{{ personal_name[0] }}</h1>
+          <h2>{{ personal_name_en[0] }}</h2>
+          <div style="font-size: x-large; line-height: 36px">{{ personal_info[0] }}</div>
         </div>
       </el-row>
       <!----  --->
@@ -53,9 +53,9 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
-          <h1>{{ personal_name[1] }}</h1>
-          <h5>{{ personal_name_en[1] }}</h5>
-          <div>{{ personal_info[1] }}</div>
+          <h1 style="font-size: xx-large">{{ personal_name[1] }}</h1>
+          <h2>{{ personal_name_en[1] }}</h2>
+          <div style="font-size: x-large; line-height: 36px">{{ personal_info[1] }}</div>
         </div>
       </el-row>
     </div>

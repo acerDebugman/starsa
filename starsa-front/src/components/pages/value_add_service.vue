@@ -9,6 +9,7 @@
         </div>
       </div>
     </div>
+    <!-- all -->
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
@@ -20,7 +21,7 @@
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
-        <div style="border: 0px solid #f00;font-weight: bold; padding: 0px; margin: 0px;">
+        <div style="border: 0px solid #f00;font-size: x-large;line-height: 36px; padding: 0px; margin: 0px;">
           <div v-for="item in msg_value_add">{{ item }}</div>
         </div>
       </el-row>
@@ -35,7 +36,7 @@
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;height: 400px">
           <img :src="betty_en" style="height: auto; width: auto;"/>
         </div>
-        <span style="border: 0px solid #f00;font-weight: bold">
+        <span style="border: 0px solid #f00;font-size: medium;line-height: 30px;">
           <div v-for="item in msg_value_add1">{{ item }}</div>
         </span>
       </el-row>
@@ -50,7 +51,7 @@
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
           <img :src="betty_ch" style="height: auto; width: auto;"/>
         </div>
-        <span style="border: 0px solid #f00;font-weight: bold">
+        <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add2">{{ item }}</span>
         </span>
       </el-row>
@@ -65,7 +66,7 @@
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
           <img :src="betty_en" style="height: auto; width: auto;"/>
         </div>
-        <span style="border: 0px solid #f00;font-weight: bold">
+        <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add3">{{ item }}</span>
         </span>
       </el-row>
@@ -80,7 +81,7 @@
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
           <img :src="betty_ch" style="height: auto; width: auto;"/>
         </div>
-        <span style="border: 0px solid #f00;font-weight: bold">
+        <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add4">{{ item }}</span>
         </span>
       </el-row>
