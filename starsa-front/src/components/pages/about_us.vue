@@ -4,8 +4,8 @@
     <div id="show-img">
       <img :src="about_us" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
-        <div class="my_dialog_title">{{ dialog_title }}</div>
-        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_title" style="font-size: x-large; line-height: 20px !important;">{{ dialog_title }}</div>
+        <div class="my_dialog_content" style="font-size: large; line-height: 22px !important; margin-top: 0" v-for="msg_item in dialog_content ">{{ msg_item }}
         </div>
       </div>
     </div>
@@ -104,11 +104,11 @@
 
       let dialog_content = [
         "新星国际 X-star International Pty Ltd",
-        "REG: 2012/199515/07",
         "公司地址: 26 ERNEST OPPENHEIMER STREET,VASCO DA GAMA HOUSE, BRUMA 2026",
         "公司微信： 1060151666(签证服务)  saminxhl(会计服务)" ,
-        "南非联系电话: 0782763881  Betty 王",
+        "南非总经理联系电话: 0782763881  Betty 王",
         "会计师联系电话: 0846428984  Sam 谢",
+        "旅游经理联系电话：+27729365435 张赟(Amelie Zhang) xstar-amelie@hotmail.com",
         "南非Office电话: 011 0396355",
       ]
 

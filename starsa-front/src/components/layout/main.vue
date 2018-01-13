@@ -31,6 +31,11 @@
             增值服务
           </div>
         </el-menu-item>
+        <el-menu-item index="/travel_service">
+          <div class="mytitle">
+            奢华之旅
+          </div>
+        </el-menu-item>
         <el-menu-item index="/about_us">
           <div class="mytitle">
             关于我们
@@ -103,6 +108,12 @@
               <router-link to="/value_add_service" target="_blank"
                            style="text-decoration: none;color: inherit">
                 增值服务
+              </router-link>
+            </p>
+            <p>
+              <router-link to="/travel_service" target="_blank"
+                           style="text-decoration: none;color: inherit">
+                奢华之旅服务
               </router-link>
             </p>
           </div>
@@ -240,7 +251,7 @@
     border: 0px solid #f00;
     top: 200px;
     left: 80px;
-    width: 600px;
+    width: 700px;
     height: 300px;
     line-height: 30px !important;
     opacity: 1 !important;
