@@ -107,7 +107,7 @@
       <p/>
       <a
         href="/static/pdf/开普敦_2018.pdf"
-        target="_blank" style="font-size: x-large">南非克鲁格奢华游G_2018.pdf</a>
+        target="_blank" style="font-size: x-large">南非克鲁格奢华游_2018.pdf</a>
     </el-row>
 
   </div>
