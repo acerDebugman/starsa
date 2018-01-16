@@ -33,7 +33,7 @@
         </el-menu-item>
         <el-menu-item index="/travel_service">
           <div class="mytitle">
-            奢华之旅
+            机票旅游服务
           </div>
         </el-menu-item>
         <el-menu-item index="/about_us">
