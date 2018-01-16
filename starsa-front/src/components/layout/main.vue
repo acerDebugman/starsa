@@ -84,7 +84,7 @@
               <img :src="xstarfooter" style="opacity:0.7;"/>
             </p>
             <p>
-              <router-link to="visa_service"
+              <router-link to="home_service"
                            style="text-decoration:none; color:#ccc;color: inherit">
                 新星国际 X-STARSA Internal Cooperation
               </router-link>
@@ -255,6 +255,7 @@
     height: 300px;
     line-height: 30px !important;
     opacity: 1 !important;
+    overflow: hidden !important;
   }
 
   .my_dialog_title {
