@@ -108,6 +108,11 @@
       <a
         href="/static/pdf/开普敦_2018.pdf"
         target="_blank" style="font-size: x-large">南非克鲁格奢华游_2018.pdf</a>
+      <p></p>
+      <a
+        href="/static/pdf/南非狩猎之旅-新星国际(含部分报价).pdf"
+        target="_blank" style="font-size: x-large">南非狩猎之旅-新星国际(含部分报价).pdf
+      </a>
     </el-row>
 
   </div>
@@ -132,6 +137,7 @@
   import poster1 from "@/assets/images/poster1.jpg"
   import poster2 from "@/assets/images/poster2.jpg"
   import poster3 from "@/assets/images/poster3.jpg"
+
 
   export default {
     components: {},
