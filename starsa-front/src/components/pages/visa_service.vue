@@ -88,6 +88,60 @@
           <h3>{{ one_belt_one_road[1] }}</h3>
         </span>
       </el-row>
+      <!-- pdf download -->
+      <div
+        style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ download_title[0] }}</p>
+        <p class="to-center" style="color:#ccc">{{ download_title_en[0] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <p/>
+        <a
+          href="/static/pdf/Checklist-INTRA-COMPANY-TRANSFER-WORK-内地调动签证所需资料.pdf"
+          target="_blank" style="font-size: x-large">Checklist-INTRA-COMPANY-TRANSFER-WORK-内地调动签证所需资料.pdf</a>
+        <p/>
+        <a
+          href="/static/pdf/Checklist-RELATIVES-VISA-陪伴签证所需资料.pdf"
+          target="_blank" style="font-size: x-large">Checklist-RELATIVES-VISA-陪伴签证所需资料.pdf</a>
+        <p/>
+        <a
+          href="/static/pdf/Revised-10-Year-BRICS-Business-Executive-Visa-updated金砖国家企业高管十年商务签证.pdf"
+          target="_blank" style="font-size: x-large">Revised-10-Year-BRICS-Business-Executive-Visa-updated金砖国家企业高管十年商务签证.pdf</a>
+        <p/>
+        <a
+          href="/static/pdf/Revised-A-PERIOD-EXCEEDING-THREE-MONTHS-updated3个月到三年的访问签证.pdf"
+          target="_blank" style="font-size: x-large">Revised-A-PERIOD-EXCEEDING-THREE-MONTHS-updated3个月到三年的访问签证.pdf
+        </a>
+        <p/>
+        <a
+          href="/static/pdf/Revised-Business-Visitor-updated商务访问.pdf"
+          target="_blank" style="font-size: x-large">Revised-Business-Visitor-updated商务访问.pdf
+        </a>
+        <p/>
+        <a
+          href="/static/pdf/Revised-Individual-Holiday-updated旅游访问签证.pdf"
+          target="_blank" style="font-size: x-large">Revised-Individual-Holiday-updated旅游访问签证.pdf
+        </a>
+        <p/>
+        <a
+          href="/static/pdf/Revised-Visit-FamilyFriends-updated探亲和访友.pdf"
+          target="_blank" style="font-size: x-large">Revised-Visit-FamilyFriends-updated探亲和访友.pdf
+        </a>
+      </el-row>
+      <div
+        style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ download_title[1] }}</p>
+        <p class="to-center" style="color:#ccc">{{ download_title_en[1] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <p/>
+        <a
+          href="http://www.vfsglobal.cn/SouthAfrica/China/chinese/index.html"
+          target="_blank" style="font-size: x-large">北京南非签证中心</a>
+        <p/>
+      </el-row>
     </div>
   </div>
 </template>
@@ -103,7 +157,9 @@
                        "签证类服务",
                        "进出关问题",
                        "北京办事处服务",
-                       "一带一路商务洽谈"]
+                       "一带一路商务洽谈",
+                       "相关签证申请文档"
+      ]
 
       let msg_title_en = ["X-STAR VISA SOLUTIONS",
                           "X-STAR VISA SOLUTIONS",
@@ -142,6 +198,16 @@
         "并协助邀请中国驻南非使领馆官员以及南非国一定级别领导（含副总统及总统）出席参与。"
       ]
 
+      let download_title = [
+        "相关签证文档",
+        "相关网站链接"
+      ]
+
+      let download_title_en = [
+        "MORE VISA DOCUMENTS",
+        "RELATIVE LINKS"
+      ]
+
       return {
         images: [show1],
         screenHeight: window.innerHeight,
@@ -155,7 +221,9 @@
         beijing_office: beijing_office,
         one_belt_one_road: one_belt_one_road,
         dialog_content: msg_title,
-        dialog_title: "签证类服务"
+        dialog_title: "签证类服务",
+        download_title: download_title,
+        download_title_en: download_title_en
       }
     },
     mounted: function () {
