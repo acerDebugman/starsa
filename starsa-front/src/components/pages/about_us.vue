@@ -50,7 +50,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto; "/>
+          <img :src="sam_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
           <h1 style="font-size: xx-large">{{ personal_name[1] }}</h1>
@@ -64,6 +64,8 @@
 <script>
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import sam_ch from "@/assets/images/card-sam-ch.jpg"
+  import sam_en from "@/assets/images/card-sam-en.jpg"
   import about_us from "@/assets/images/about-us-banner.jpg"
 
   export default {
@@ -123,6 +125,8 @@
         company_info: company_info,
         betty_ch: betty_ch,
         betty_en: betty_en,
+        sam_ch: sam_ch,
+        sam_en: sam_en,
         dialog_content: dialog_content,
         dialog_title: "关于我们"
       }

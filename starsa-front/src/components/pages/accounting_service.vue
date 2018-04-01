@@ -16,7 +16,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
+        <img :src="sam_ch" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_tax">{{ item }}</h1>
         </div>
@@ -29,7 +29,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <img :src="sam_en" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_audit">{{ item }}</h1>
         </div>
@@ -42,7 +42,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
+        <img :src="sam_ch" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_report">{{ item }}</h1>
         </div>
@@ -80,6 +80,8 @@
   import accounting_banner from "@/assets/images/accounting-banner2.jpg"
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import sam_ch from "@/assets/images/card-sam-ch.jpg"
+  import sam_en from "@/assets/images/card-sam-en.jpg"
 
   export default {
     components: {},
@@ -139,6 +141,8 @@
         screenHeight: window.innerHeight,
         betty_en: betty_en,
         betty_ch: betty_ch,
+        sam_ch: sam_ch,
+        sam_en: sam_en,
         msg_title: msg_title,
         msg_title_en: msg_title_en,
         accounting_tax: accounting_tax,
