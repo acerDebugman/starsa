@@ -167,8 +167,8 @@
                           "X-STAR VISA SOLUTIONS",
                           "X-STAR VISA SOLUTIONS"]
 
-      let msg_visa_doc = ["南非注册结婚以及南非外交部公证认证",
-                          "南非小孩出生证明以及外交部公证认证",
+      let msg_visa_doc = ["南非注册结婚以及南非相关公证认证",
+                          "南非小孩出生证明以及相关公证认证",
                           "南非无犯罪等",
                           "南非未入籍以及退籍申请"]
 
