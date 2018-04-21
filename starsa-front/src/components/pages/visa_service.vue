@@ -38,6 +38,8 @@
           <h1>{{ msg_visa_apply[1] }}</h1>
           <h1>{{ msg_visa_apply[2] }}</h1>
           <h1>{{ msg_visa_apply[3] }}</h1>
+          <br />
+          <h1 style="color:red"><--右图是疫苗接种或预防措施国际证书封面</h1>
         </div>
       </el-row>
       <div
@@ -57,6 +59,8 @@
           <h1>{{ beijing_office[4] }}</h1>
           <h4>{{ beijing_office[5] }}</h4>
           <h4>{{ beijing_office[6] }}</h4>
+          <br />
+          <h1 style="color:red"><--右图是国际旅行健康检查证明书封面</h1>
         </div>
       </el-row>
       <div
@@ -150,8 +154,8 @@
   import show1 from "@/assets/images/visa-banner.jpg"
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
-  import health_red from "@/assets/images/visa_red.png"
-  import health_yellow from "@/assets/images/visa_yellow.png"
+  import health_red from "@/assets/images/visa_red3.png"
+  import health_yellow from "@/assets/images/visa_yellow3.png"
   import onebelt from "@/assets/images/onebelt.jpg"
   import cargo from "@/assets/images/cargo.jpg"
 
