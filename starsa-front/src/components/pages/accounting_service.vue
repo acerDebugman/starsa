@@ -29,7 +29,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="sam_en" style="height: auto; width: auto; float: left"/>
+        <img :src="account_audit_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_audit">{{ item }}</h1>
         </div>
@@ -42,7 +42,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="sam_ch" style="height: auto; width: auto; float: left"/>
+        <img :src="account_report_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_report">{{ item }}</h1>
         </div>
@@ -55,7 +55,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <img :src="account_secretary_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in accounting_secretary">{{ item }}</h1>
         </div>
@@ -68,7 +68,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
+        <img :src="account_human_resource_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1 v-for="item in human_resource">{{ item }}</h1>
         </div>
@@ -82,6 +82,10 @@
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
   import sam_ch from "@/assets/images/card-sam-ch.jpg"
   import sam_en from "@/assets/images/card-sam-en.jpg"
+  import account_audit_img from "@/assets/images/account_audit.jpg"
+  import account_report_img from "@/assets/images/account_report.jpg"
+  import account_secretary_img from "@/assets/images/account_secretary.jpg"
+  import account_human_resource_img from "@/assets/images/account_human_resource.jpg"
 
   export default {
     components: {},
@@ -143,6 +147,10 @@
         betty_ch: betty_ch,
         sam_ch: sam_ch,
         sam_en: sam_en,
+        account_audit_img: account_audit_img,
+        account_report_img: account_report_img,
+        account_secretary_img: account_secretary_img,
+        account_human_resource_img: account_human_resource_img,
         msg_title: msg_title,
         msg_title_en: msg_title_en,
         accounting_tax: accounting_tax,

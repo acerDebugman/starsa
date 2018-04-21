@@ -34,7 +34,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;height: 400px">
-          <img :src="betty_en" style="height: auto; width: auto;"/>
+          <img :src="valueadd_tax_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: medium;line-height: 30px;">
           <div v-for="item in msg_value_add1">{{ item }}</div>
@@ -49,7 +49,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto;"/>
+          <img :src="valueadd_invest_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add2">{{ item }}</span>
@@ -64,7 +64,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
-          <img :src="betty_en" style="height: auto; width: auto;"/>
+          <img :src="valueadd_rand_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add3">{{ item }}</span>
@@ -79,7 +79,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto;"/>
+          <img :src="valueadd_public_service_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
           <span v-for="item in msg_value_add4">{{ item }}</span>
@@ -91,6 +91,10 @@
 <script>
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import valueadd_tax_img from "@/assets/images/valueadd_tax.jpg"
+  import valueadd_invest_img from "@/assets/images/valueadd_invest.jpg"
+  import valueadd_rand_img from "@/assets/images/valueadd_rand.jpg"
+  import valueadd_public_service_img from "@/assets/images/valueadd_public_service.jpg"
   import value_add_banner from "@/assets/images/value-add-banner2.jpg"
 
   export default {
@@ -162,6 +166,10 @@
       return {
         betty_ch: betty_ch,
         betty_en: betty_en,
+        valueadd_tax_img: valueadd_tax_img,
+        valueadd_invest_img: valueadd_invest_img,
+        valueadd_public_service_img: valueadd_public_service_img,
+        valueadd_rand_img: valueadd_rand_img,
         value_add_banner: value_add_banner,
         screenHeight: window.innerHeight,
         msg_title: msg_title,

@@ -32,7 +32,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <img :src="health_yellow" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1>{{ msg_visa_apply[0] }}</h1>
           <h1>{{ msg_visa_apply[1] }}</h1>
@@ -48,22 +48,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
-        <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1>{{ boundary_port[0] }}</h1>
-          <h1>{{ boundary_port[1] }}</h1>
-          <h1>{{ boundary_port[2] }}</h1>
-        </div>
-      </el-row>
-      <div
-        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
-        <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}
-        </p>
-      </div>
-      <el-row
-        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_en" style="height: auto; width: auto; float: left"/>
+        <img :src="health_red" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1>{{ beijing_office[0] }}</h1>
           <h4>{{ beijing_office[1] }}</h4>
@@ -76,16 +61,32 @@
       </el-row>
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="cargo" style="height: auto; width: auto; float: left"/>
+        <div style="float: left; margin-top: 1%;margin-left: 20px">
+          <h1>{{ boundary_port[0] }}</h1>
+          <h1>{{ boundary_port[1] }}</h1>
+          <h1>{{ boundary_port[2] }}</h1>
+        </div>
+      </el-row>
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ msg_title[4] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}
         </p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="betty_ch" style="height: auto; width: auto; float: left; margin-right: 10px"/>
+        <img :src="onebelt" style="height: auto; width: auto; float: left; margin-right: 10px"/>
         <span>
-          <h3>{{ one_belt_one_road[0] }}</h3>
-          <h3>{{ one_belt_one_road[1] }}</h3>
+          <h1>{{ one_belt_one_road[0] }}</h1>
+          <h1>{{ one_belt_one_road[1] }}</h1>
+          <h1>{{ one_belt_one_road[2] }}</h1>
         </span>
       </el-row>
       <!-- pdf download -->
@@ -149,37 +150,41 @@
   import show1 from "@/assets/images/visa-banner.jpg"
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import health_red from "@/assets/images/visa_red.png"
+  import health_yellow from "@/assets/images/visa_yellow.png"
+  import onebelt from "@/assets/images/onebelt.jpg"
+  import cargo from "@/assets/images/cargo.jpg"
 
   export default {
     components: {},
     data() {
       let msg_title = ["签证资料服务",
-                       "签证类服务",
-                       "进出关问题",
-                       "北京办事处服务",
-                       "一带一路商务洽谈",
-                       "相关签证申请文档"
+        "签证类服务",
+        "北京办事处服务",
+        "进出关问题",
+        "一带一路商务洽谈",
+        "相关签证申请文档"
       ]
 
       let msg_title_en = ["X-STAR VISA SOLUTIONS",
-                          "X-STAR VISA SOLUTIONS",
-                          "X-STAR VISA SOLUTIONS",
-                          "X-STAR VISA SOLUTIONS",
-                          "X-STAR VISA SOLUTIONS"]
+        "X-STAR VISA SOLUTIONS",
+        "X-STAR VISA SOLUTIONS",
+        "X-STAR VISA SOLUTIONS",
+        "X-STAR VISA SOLUTIONS"]
 
       let msg_visa_doc = ["南非注册结婚以及南非相关公证认证",
-                          "南非小孩出生证明以及相关公证认证",
-                          "南非无犯罪等",
-                          "南非未入籍以及退籍申请"]
+        "南非小孩出生证明以及相关公证认证",
+        "南非无犯罪等",
+        "南非未入籍以及退籍申请"]
 
       let msg_visa_apply = ["南非永久居留PR申请，ID 申请",
-                            "学生签证,陪伴签证,退休签证,商务考察签证延期",
-                            "贴纸转贴",
-                            "南非申请美国10年多次往返签证"]
+        "学生签证,陪伴签证,退休签证,商务考察签证延期",
+        "贴纸转贴",
+        "南非申请美国10年多次往返签证"]
 
       let boundary_port = ["进出关南非逾期滞留",
-                           "进出关口签证类任何疑难杂症",
-                           "为客户进出关南非保驾护航"]
+        "进出关口签证类任何疑难杂症",
+        "为客户进出关南非保驾护航"]
 
       let beijing_office = [
         "南非短期签证：",
@@ -192,7 +197,9 @@
       ]
 
       let one_belt_one_road = [
-        ""
+        "接待国内到南非各商务考察团",
+        "按客户要求策划举办相应会议及活动",
+        "利用本司资源连结各重量级嘉宾"
       ]
 
       let download_title = [
@@ -210,6 +217,10 @@
         screenHeight: window.innerHeight,
         betty_en: betty_en,
         betty_ch: betty_ch,
+        health_yellow: health_yellow,
+        health_red: health_red,
+        onebelt: onebelt,
+        cargo: cargo,
         msg_visa_doc: msg_visa_doc,
         msg_visa_apply: msg_visa_apply,
         msg_title: msg_title,

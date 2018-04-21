@@ -21,7 +21,7 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;">
-          <h1 style="line-height: 30px;">{{ company_info[0] }}</h1>
+          <h3 style="line-height: 30px;">{{ company_info[0] }}</h3>
         </div>
       </el-row>
       <!----  --->
