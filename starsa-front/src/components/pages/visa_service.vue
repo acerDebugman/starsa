@@ -32,14 +32,12 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="health_yellow" style="height: auto; width: auto; float: left"/>
+        <img :src="visa_service_apply_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1>{{ msg_visa_apply[0] }}</h1>
           <h1>{{ msg_visa_apply[1] }}</h1>
           <h1>{{ msg_visa_apply[2] }}</h1>
           <h1>{{ msg_visa_apply[3] }}</h1>
-          <br />
-          <h1 style="color:red"><--右图是疫苗接种或预防措施国际证书封面</h1>
         </div>
       </el-row>
       <div
@@ -50,7 +48,7 @@
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <img :src="health_red" style="height: auto; width: auto; float: left"/>
+        <img :src="visa_beijing_office_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
           <h1>{{ beijing_office[0] }}</h1>
           <h4>{{ beijing_office[1] }}</h4>
@@ -59,8 +57,6 @@
           <h1>{{ beijing_office[4] }}</h1>
           <h4>{{ beijing_office[5] }}</h4>
           <h4>{{ beijing_office[6] }}</h4>
-          <br />
-          <h1 style="color:red"><--右图是国际旅行健康检查证明书封面</h1>
         </div>
       </el-row>
       <div
@@ -91,6 +87,24 @@
           <h1>{{ one_belt_one_road[0] }}</h1>
           <h1>{{ one_belt_one_road[1] }}</h1>
           <h1>{{ one_belt_one_road[2] }}</h1>
+        </span>
+      </el-row>
+      <!-- healhty -->
+      <div
+        style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ health_doc_title[0] }}</p>
+        <p class="to-center" style="color:#ccc">{{ health_doc_title[1] }}
+        </p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <img :src="health_red" style="height: auto; width: auto; float: left; margin-right: 10px"/>
+        <img :src="health_yellow" style="height: auto; width: auto; float: left; margin-right: 10px"/>
+        <span>
+          <h3>{{ health_doc_content[0] }}</h3>
+          <h3>{{ health_doc_content[1] }}</h3>
+          <h3>{{ health_doc_content[2] }}</h3>
+          <h3>{{ health_doc_content[3] }}</h3>
         </span>
       </el-row>
       <!-- pdf download -->
@@ -158,6 +172,8 @@
   import health_yellow from "@/assets/images/visa_yellow3.png"
   import onebelt from "@/assets/images/onebelt.jpg"
   import cargo from "@/assets/images/cargo.jpg"
+  import visa_service_apply from "@/assets/images/visa_service_apply.jpg"
+  import visa_beijing_office from "@/assets/images/visa_beijing_office.jpg"
 
   export default {
     components: {},
@@ -167,7 +183,7 @@
         "北京办事处服务",
         "进出关问题",
         "一带一路商务洽谈",
-        "相关签证申请文档"
+        "相关签证申请文档",
       ]
 
       let msg_title_en = ["X-STAR VISA SOLUTIONS",
@@ -216,6 +232,18 @@
         "RELATIVE LINKS"
       ]
 
+      let health_doc_title = [
+        "签证健康相关文件",
+        "VISA HEALTH RELATIVE DOCS"
+      ]
+
+      let health_doc_content = [
+          "办理非洲家签证经常会碰到提供“红本”-“黄本”" ,
+          "“红本”学名叫《国际旅行健康检查证明书》，封面为红色皮故称红本" ,
+          "“黄本”学名叫《疫苗接种或预防措施国际证书》，封面为黄色皮故称黄本" ,
+          "红本和黄本一般是在市一级的出入境检疫检验局下设的国际旅行卫生保健中心办理",
+      ]
+
       return {
         images: [show1],
         screenHeight: window.innerHeight,
@@ -225,6 +253,8 @@
         health_red: health_red,
         onebelt: onebelt,
         cargo: cargo,
+        visa_service_apply_img: visa_service_apply,
+        visa_beijing_office_img: visa_beijing_office,
         msg_visa_doc: msg_visa_doc,
         msg_visa_apply: msg_visa_apply,
         msg_title: msg_title,
@@ -235,7 +265,9 @@
         dialog_content: msg_title,
         dialog_title: "签证类服务",
         download_title: download_title,
-        download_title_en: download_title_en
+        download_title_en: download_title_en,
+        health_doc_content: health_doc_content,
+        health_doc_title: health_doc_title
       }
     },
     mounted: function () {
