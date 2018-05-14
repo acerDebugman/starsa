@@ -5,7 +5,8 @@
       <img :src="about_us" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
         <div class="my_dialog_title" style="font-size: x-large; line-height: 20px !important;">{{ dialog_title }}</div>
-        <div class="my_dialog_content" style="font-size: large; line-height: 22px !important; margin-top: 0" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_content" style="font-size: large; line-height: 22px !important; margin-top: 0"
+             v-for="msg_item in dialog_content ">{{ msg_item }}
         </div>
       </div>
     </div>
@@ -24,6 +25,7 @@
           <h3 style="line-height: 30px;">{{ company_info[0] }}</h3>
         </div>
       </el-row>
+
       <!----  --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
@@ -58,6 +60,21 @@
           <div style="font-size: x-large; line-height: 36px">{{ personal_info[1] }}</div>
         </div>
       </el-row>
+      <!--- --->
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
+          <img :src="honour_wtt" style="height: auto; width: auto; "/>
+        </div>
+        <div style="border: 0px solid #f00;">
+          <h1 style="line-height: 30px;">本司王婷婷总经理荣当第六届监事会副会长</h1>
+        </div>
+      </el-row>
     </div>
   </div>
 </template>
@@ -67,6 +84,7 @@
   import sam_ch from "@/assets/images/card-sam-ch.jpg"
   import sam_en from "@/assets/images/card-sam-en.jpg"
   import about_us from "@/assets/images/about-us-banner.jpg"
+  import honour_wtt from "@/assets/images/wangtingting_show.jpg"
 
   export default {
     components: {},
@@ -75,11 +93,13 @@
         "公司发展史",
         "签证商务部负责人介绍",
         "会计部负责人介绍",
+        "获得荣耀",
       ]
       let msg_title_en = [
         "Company History",
         "Visa Service Manager",
-        "Accounting Service Manager"
+        "Accounting Service Manager",
+        "Honour"
       ]
       let personal_name = [
         "王婷婷",
@@ -112,7 +132,7 @@
       let dialog_content = [
         "新星国际 X-star International Pty Ltd",
         "公司地址: 26 ERNEST OPPENHEIMER STREET,VASCO DA GAMA HOUSE, BRUMA 2026",
-        "公司微信： 1060151666(签证服务)  saminxhl(会计服务)" ,
+        "公司微信： 1060151666(签证服务)  saminxhl(会计服务)",
         "南非总经理联系电话: 0782763881  Betty 王",
         "会计师联系电话: 0846428984  Sam 谢",
         "旅游经理联系电话：+27729365435 张赟(Amelie Zhang) xstar-amelie@hotmail.com",
@@ -131,6 +151,7 @@
         company_info: company_info,
         betty_ch: betty_ch,
         betty_en: betty_en,
+        honour_wtt: honour_wtt,
         sam_ch: sam_ch,
         sam_en: sam_en,
         dialog_content: dialog_content,
