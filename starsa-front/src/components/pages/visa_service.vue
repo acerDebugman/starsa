@@ -3,30 +3,30 @@
     <div id="show-img">
       <img :src="images[0]" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
-        <div class="my_dialog_title">{{ dialog_title }}</div>
-        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_title">{{ $t("visa.dialog_title") }}</div>
+        <div class="my_dialog_content" v-for="msg_item in $t('visa.msg_title') ">{{ msg_item }}
         </div>
       </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center">{{ $t("visa.msg_title")[0] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="betty_ch" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1>{{ msg_visa_doc[0] }}</h1>
-          <h1>{{ msg_visa_doc[1] }}</h1>
-          <h1>{{ msg_visa_doc[2] }}</h1>
-          <h1>{{ msg_visa_doc[3] }}</h1>
+          <h1>{{ $t("visa.msg_visa_doc")[0] }}</h1>
+          <h1>{{ $t("visa.msg_visa_doc")[1] }}</h1>
+          <h1>{{ $t("visa.msg_visa_doc")[2] }}</h1>
+          <h1>{{ $t("visa.msg_visa_doc")[3] }}</h1>
         </div>
       </el-row>
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center">{{ $t("visa.msg_title")[1] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}
         </p>
       </div>
@@ -34,15 +34,15 @@
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="visa_service_apply_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1>{{ msg_visa_apply[0] }}</h1>
-          <h1>{{ msg_visa_apply[1] }}</h1>
-          <h1>{{ msg_visa_apply[2] }}</h1>
-          <h1>{{ msg_visa_apply[3] }}</h1>
+          <h1>{{ $t("visa.msg_visa_apply")[0] }}</h1>
+          <h1>{{ $t("visa.msg_visa_apply")[1] }}</h1>
+          <h1>{{ $t("visa.msg_visa_apply")[2] }}</h1>
+          <h1>{{ $t("visa.msg_visa_apply")[3] }}</h1>
         </div>
       </el-row>
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center">{{ $t("visa.msg_title")[2] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}
         </p>
       </div>
@@ -50,18 +50,18 @@
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="visa_beijing_office_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1>{{ beijing_office[0] }}</h1>
-          <h4>{{ beijing_office[1] }}</h4>
-          <h1>{{ beijing_office[2] }}</h1>
-          <h4>{{ beijing_office[3] }}</h4>
-          <h1>{{ beijing_office[4] }}</h1>
-          <h4>{{ beijing_office[5] }}</h4>
-          <h4>{{ beijing_office[6] }}</h4>
+          <h1>{{ $t("visa.beijing_office")[0] }}</h1>
+          <h4>{{ $t("visa.beijing_office")[1] }}</h4>
+          <h1>{{ $t("visa.beijing_office")[2] }}</h1>
+          <h4>{{ $t("visa.beijing_office")[3] }}</h4>
+          <h1>{{ $t("visa.beijing_office")[4] }}</h1>
+          <h4>{{ $t("visa.beijing_office")[5] }}</h4>
+          <h4>{{ $t("visa.beijing_office")[6] }}</h4>
         </div>
       </el-row>
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center">{{ $t("visa.msg_title")[3] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}
         </p>
       </div>
@@ -69,14 +69,14 @@
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="cargo" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1>{{ boundary_port[0] }}</h1>
-          <h1>{{ boundary_port[1] }}</h1>
-          <h1>{{ boundary_port[2] }}</h1>
+          <h1>{{ $t("visa.boundary_port")[0] }}</h1>
+          <h1>{{ $t("visa.boundary_port")[1] }}</h1>
+          <h1>{{ $t("visa.boundary_port")[2] }}</h1>
         </div>
       </el-row>
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[4] }}</p>
+        <p class="to-center">{{ $t("visa.msg_title")[4] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}
         </p>
       </div>
@@ -84,16 +84,16 @@
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="onebelt" style="height: auto; width: auto; float: left; margin-right: 10px"/>
         <span>
-          <h1>{{ one_belt_one_road[0] }}</h1>
-          <h1>{{ one_belt_one_road[1] }}</h1>
-          <h1>{{ one_belt_one_road[2] }}</h1>
+          <h1>{{ $t("visa.one_belt_one_road")[0] }}</h1>
+          <h1>{{ $t("visa.one_belt_one_road")[1] }}</h1>
+          <h1>{{ $t("visa.one_belt_one_road")[2] }}</h1>
         </span>
       </el-row>
       <!-- healhty -->
       <div
         style="text-align: left; margin:30px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ health_doc_title[0] }}</p>
-        <p class="to-center" style="color:#ccc">{{ health_doc_title[1] }}
+        <p class="to-center">{{ $t("visa.health_doc_title")[0] }}</p>
+        <p class="to-center" style="color:#ccc">{{ $t("visa.health_doc_title")[1] }}
         </p>
       </div>
       <el-row
@@ -101,16 +101,16 @@
         <img :src="health_red" style="height: auto; width: auto; float: left; margin-right: 10px"/>
         <img :src="health_yellow" style="height: auto; width: auto; float: left; margin-right: 10px"/>
         <span>
-          <h3>{{ health_doc_content[0] }}</h3>
-          <h3>{{ health_doc_content[1] }}</h3>
-          <h3>{{ health_doc_content[2] }}</h3>
-          <h3>{{ health_doc_content[3] }}</h3>
+          <h3>{{ $t("visa.health_doc_content")[0] }}</h3>
+          <h3>{{ $t("visa.health_doc_content")[1] }}</h3>
+          <h3>{{ $t("visa.health_doc_content")[2] }}</h3>
+          <h3>{{ $t("visa.health_doc_content")[3] }}</h3>
         </span>
       </el-row>
       <!-- pdf download -->
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ download_title[0] }}</p>
+        <p class="to-center">{{ $t("visa.download_title")[0] }}</p>
         <p class="to-center" style="color:#ccc">{{ download_title_en[0] }}</p>
       </div>
       <el-row
@@ -150,7 +150,7 @@
       </el-row>
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ download_title[1] }}</p>
+        <p class="to-center">{{ $t("visa.download_title")[1] }}</p>
         <p class="to-center" style="color:#ccc">{{ download_title_en[1] }}</p>
       </div>
       <el-row
@@ -178,7 +178,8 @@
   export default {
     components: {},
     data() {
-      let msg_title = ["签证资料服务",
+      let msg_title = [
+        "签证资料服务",
         "签证类服务",
         "北京办事处服务",
         "进出关问题",
@@ -186,25 +187,33 @@
         "相关签证申请文档",
       ]
 
-      let msg_title_en = ["X-STAR VISA SOLUTIONS",
+      let msg_title_en = [
         "X-STAR VISA SOLUTIONS",
         "X-STAR VISA SOLUTIONS",
         "X-STAR VISA SOLUTIONS",
-        "X-STAR VISA SOLUTIONS"]
+        "X-STAR VISA SOLUTIONS",
+        "X-STAR VISA SOLUTIONS"
+      ]
 
-      let msg_visa_doc = ["南非注册结婚以及南非相关公证认证",
+      let msg_visa_doc = [
+        "南非注册结婚以及南非相关公证认证",
         "南非小孩出生证明以及相关公证认证",
         "南非无犯罪等",
-        "南非未入籍以及退籍申请"]
+        "南非未入籍以及退籍申请"
+      ]
 
-      let msg_visa_apply = ["南非永久居留PR申请，ID 申请",
+      let msg_visa_apply = [
+        "南非永久居留PR申请，ID 申请",
         "学生签证,陪伴签证,退休签证,商务考察签证延期",
         "贴纸转贴",
-        "南非申请美国10年多次往返签证"]
+        "南非申请美国10年多次往返签证"
+      ]
 
-      let boundary_port = ["进出关南非逾期滞留",
+      let boundary_port = [
+        "进出关南非逾期滞留",
         "进出关口签证类任何疑难杂症",
-        "为客户进出关南非保驾护航"]
+        "为客户进出关南非保驾护航"
+      ]
 
       let beijing_office = [
         "南非短期签证：",
@@ -255,19 +264,19 @@
         cargo: cargo,
         visa_service_apply_img: visa_service_apply,
         visa_beijing_office_img: visa_beijing_office,
-        msg_visa_doc: msg_visa_doc,
-        msg_visa_apply: msg_visa_apply,
-        msg_title: msg_title,
+//        msg_visa_doc: msg_visa_doc,
+//        msg_visa_apply: msg_visa_apply,
+//        msg_title: msg_title,
         msg_title_en: msg_title_en,
-        boundary_port: boundary_port,
-        beijing_office: beijing_office,
-        one_belt_one_road: one_belt_one_road,
-        dialog_content: msg_title,
-        dialog_title: "签证类服务",
-        download_title: download_title,
+//        boundary_port: boundary_port,
+//        beijing_office: beijing_office,
+//        one_belt_one_road: one_belt_one_road,
+//        dialog_content: msg_title,
+//        dialog_title: "签证类服务",
+//        download_title: download_title,
         download_title_en: download_title_en,
-        health_doc_content: health_doc_content,
-        health_doc_title: health_doc_title
+//        health_doc_content: health_doc_content,
+//        health_doc_title: health_doc_title
       }
     },
     mounted: function () {

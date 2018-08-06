@@ -3,74 +3,74 @@
     <div id="show-img">
       <img :src="accounting_banner" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
-        <div class="my_dialog_title">{{ dialog_title }}</div>
-        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_title">{{ $t("accounting.dialog_title") }}</div>
+        <div class="my_dialog_content" v-for="msg_item in $t('accounting.msg_title') ">{{ msg_item }}
         </div>
       </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center">{{ $t("accounting.msg_title")[0] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="sam_ch" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1 v-for="item in accounting_tax">{{ item }}</h1>
+          <h1 v-for="item in $t('accounting.accounting_tax')">{{ item }}</h1>
         </div>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:20px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center">{{ $t("accounting.msg_title")[1] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="account_audit_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1 v-for="item in accounting_audit">{{ item }}</h1>
+          <h1 v-for="item in $t('accounting.accounting_audit')">{{ item }}</h1>
         </div>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:20px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center">{{ $t("accounting.msg_title")[2] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="account_report_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1 v-for="item in accounting_report">{{ item }}</h1>
+          <h1 v-for="item in $t('accounting.accounting_report')">{{ item }}</h1>
         </div>
       </el-row>
       <!---  --->
       <div
         style="text-align: left; margin:20px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center">{{ $t("accounting.msg_title")[3] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="account_secretary_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1 v-for="item in accounting_secretary">{{ item }}</h1>
+          <h1 v-for="item in $t('accounting.accounting_secretary')">{{ item }}</h1>
         </div>
       </el-row>
       <!---  --->
       <div
         style="text-align: left; margin:20px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[4] }}</p>
+        <p class="to-center">{{ $t("accounting.msg_title")[4] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <img :src="account_human_resource_img" style="height: auto; width: auto; float: left"/>
         <div style="float: left; margin-top: 1%;margin-left: 20px">
-          <h1 v-for="item in human_resource">{{ item }}</h1>
+          <h1 v-for="item in $t('accounting.human_resource')">{{ item }}</h1>
         </div>
       </el-row>
     </div>
@@ -151,15 +151,16 @@
         account_report_img: account_report_img,
         account_secretary_img: account_secretary_img,
         account_human_resource_img: account_human_resource_img,
-        msg_title: msg_title,
+
+//        msg_title: msg_title,
         msg_title_en: msg_title_en,
-        accounting_tax: accounting_tax,
-        accounting_audit: accounting_audit,
-        accounting_report: accounting_report,
-        accounting_secretary: accounting_secretary,
-        human_resource: human_resource,
-        dialog_content: msg_title,
-        dialog_title: "会计类服务"
+//        accounting_tax: accounting_tax,
+//        accounting_audit: accounting_audit,
+//        accounting_report: accounting_report,
+//        accounting_secretary: accounting_secretary,
+//        human_resource: human_resource,
+//        dialog_content: msg_title,
+//        dialog_title: "会计类服务"
       }
     },
     mounted: function () {

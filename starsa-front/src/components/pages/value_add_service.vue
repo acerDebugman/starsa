@@ -4,8 +4,8 @@
     <div id="show-img">
       <img :src="value_add_banner" style="height: 100%;width: 100%;"/>
       <div class="my_dialog" style="width: 720px">
-        <div class="my_dialog_title">{{ dialog_title }}</div>
-        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_title">{{ $t("value.dialog_title") }}</div>
+        <div class="my_dialog_content" v-for="msg_item in $t('value.msg_title')">{{ msg_item }}
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center">{{ $t("value.msg_title")[0] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
       </div>
       <el-row
@@ -22,13 +22,13 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;font-size: x-large;line-height: 36px; padding: 0px; margin: 0px;">
-          <div v-for="item in msg_value_add">{{ item }}</div>
+          <div v-for="item in $t('value.msg_value_add')">{{ item }}</div>
         </div>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center">{{ $t("value.msg_title")[1] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}</p>
       </div>
       <el-row
@@ -37,13 +37,13 @@
           <img :src="valueadd_tax_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: medium;line-height: 30px;">
-          <div v-for="item in msg_value_add1">{{ item }}</div>
+          <div v-for="item in $t('value.msg_value_add1')">{{ item }}</div>
         </span>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center">{{ $t("value.msg_title")[2] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}</p>
       </div>
       <el-row
@@ -52,13 +52,13 @@
           <img :src="valueadd_invest_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
-          <span v-for="item in msg_value_add2">{{ item }}</span>
+          <span v-for="item in $t('value.msg_value_add2')">{{ item }}</span>
         </span>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center">{{ $t("value.msg_title")[3] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
       </div>
       <el-row
@@ -67,13 +67,13 @@
           <img :src="valueadd_rand_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
-          <span v-for="item in msg_value_add3">{{ item }}</span>
+          <span v-for="item in $t('value.msg_value_add3')">{{ item }}</span>
         </span>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[4] }}</p>
+        <p class="to-center">{{ $t("value.msg_title")[4] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}</p>
       </div>
       <el-row
@@ -82,7 +82,7 @@
           <img :src="valueadd_public_service_img" style="height: auto; width: auto;"/>
         </div>
         <span style="border: 0px solid #f00;font-size: x-large;line-height: 36px;">
-          <span v-for="item in msg_value_add4">{{ item }}</span>
+          <span v-for="item in $t('value.msg_value_add4')">{{ item }}</span>
         </span>
       </el-row>
     </div>
@@ -172,15 +172,15 @@
         valueadd_rand_img: valueadd_rand_img,
         value_add_banner: value_add_banner,
         screenHeight: window.innerHeight,
-        msg_title: msg_title,
+//        msg_title: msg_title,
         msg_title_en: msg_title_en,
-        msg_value_add: msg_value_add,
-        msg_value_add1: msg_value_add1,
-        msg_value_add2: msg_value_add2,
-        msg_value_add3: msg_value_add3,
-        msg_value_add4: msg_value_add4,
-        dialog_content: msg_title,
-        dialog_title: "增值类服务"
+//        msg_value_add: msg_value_add,
+//        msg_value_add1: msg_value_add1,
+//        msg_value_add2: msg_value_add2,
+//        msg_value_add3: msg_value_add3,
+//        msg_value_add4: msg_value_add4,
+//        dialog_content: msg_title,
+//        dialog_title: "增值类服务"
       }
     },
     mounted: function () {

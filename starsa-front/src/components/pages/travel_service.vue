@@ -4,16 +4,16 @@
     <div id="show-img">
       <img :src="travel_banner" style="height: 100%;width: 100%;"/>
       <div class="my_dialog" style="width: 720px">
-        <div class="my_dialog_title">{{ dialog_title }}</div>
-        <div class="my_dialog_content" v-for="msg_item in dialog_content ">{{ msg_item }}
+        <div class="my_dialog_title">{{ $t("travel.dialog_title") }}</div>
+        <div class="my_dialog_content" v-for="msg_item in $t('travel.msg_title')">{{ msg_item }}
         </div>
       </div>
     </div>
     <div style="border:0px solid red;margin:0 auto; width: 90%; line-height: 80px">
       <div style="border:0px solid red;position: relative; left: 0;margin:10px 20px;">
-        <span @click="switch_content(0)"><router-link id="subtitle_0" class="second_title" to="/travel_router_info">旅行简介</router-link></span>
-        <span @click="switch_content(1)"><router-link id="subtitle_1" class="second_title" to="/travel_sa_info">南非简介</router-link></span>
-        <span @click="switch_content(2)"><router-link id="subtitle_2" class="second_title" to="/travel_poster_info">相关海报</router-link></span>
+        <span @click="switch_content(0)"><router-link id="subtitle_0" class="second_title" to="/travel_router_info">{{ $t('travel.sub_title')[0] }}</router-link></span>
+        <span @click="switch_content(1)"><router-link id="subtitle_1" class="second_title" to="/travel_sa_info">{{ $t('travel.sub_title')[1] }}</router-link></span>
+        <span @click="switch_content(2)"><router-link id="subtitle_2" class="second_title" to="/travel_poster_info">{{ $t('travel.sub_title')[2] }}</router-link></span>
       </div>
       <div>
         <transition name="fade"
@@ -160,8 +160,8 @@
         msg_content2: msg_content2,
         msg_content3: msg_content3,
         msg_content4: msg_content4,
-        dialog_content: msg_title,
-        dialog_title: "奢华之旅",
+//        dialog_content: msg_title,
+//        dialog_title: "奢华之旅",
         download_title: download_title,
         download_title_en: download_title_en,
         after_click:"second_title_clicked"

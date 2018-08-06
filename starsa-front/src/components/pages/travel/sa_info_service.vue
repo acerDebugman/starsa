@@ -3,9 +3,9 @@
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 10px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 36px; font-size:18px; border: 0px solid #f00">
-        <p class="info_content">{{ sa_info[0] }}</p>
+        <p class="info_content">{{ $t('travel.sa_info')[0] }}</p>
         <img :src="kruger_wild2" style="height: 100%; width: 100%;"/>
-        <p class="info_content" v-for="item in sa_info.slice(1, 4)">{{ item }}</p>
+        <p class="info_content" v-for="item in $t('travel.sa_info').slice(1, 4)">{{ item }}</p>
       </div>
     </div>
 </template>
@@ -129,7 +129,7 @@
       ]
 
       return {
-        sa_info: sa_info,
+//        sa_info: sa_info,
         travel_kruger: travel_kruger,
         travel_kruger2: travel_kruger2,
         kruger_wild: kruger_wild,

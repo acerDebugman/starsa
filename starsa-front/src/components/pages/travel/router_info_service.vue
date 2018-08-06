@@ -3,7 +3,7 @@
   <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 10px auto;">
     <div
       style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ msg_title[0] }}</p>
+      <p class="to-center">{{ $t('travel.msg_title')[0] }}</p>
       <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
     </div>
     <el-row
@@ -13,13 +13,13 @@
       </div>
       <div
         style="border: 0px solid #f00;font-size: x-large; line-height: 30px; padding: 0px; margin: 0px;">
-        <div v-for="item in msg_content">{{ item }}</div>
+        <div v-for="item in $t('travel.msg_content')">{{ item }}</div>
       </div>
     </el-row>
     <!---- kruger --->
     <div
       style="text-align: left; margin:20px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ msg_title[1] }}</p>
+      <p class="to-center">{{ $t('travel.msg_title')[1] }}</p>
       <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}</p>
     </div>
     <el-row
@@ -28,7 +28,7 @@
         <img :src="travel_kruger2" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content1[0]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content1')[0]">{{ item }}</div>
         </span>
     </el-row>
     <el-row
@@ -37,13 +37,13 @@
         <img :src="travel_kruger" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content1[1]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content1')[1]">{{ item }}</div>
         </span>
     </el-row>
     <!--- kruger wild --->
     <div
       style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ msg_title[2] }}</p>
+      <p class="to-center">{{ $t('travel.msg_title')[2] }}</p>
       <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}</p>
     </div>
     <el-row
@@ -52,7 +52,7 @@
         <img :src="kruger_wild" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content2[0]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content2')[0]">{{ item }}</div>
         </span>
     </el-row>
     <el-row
@@ -61,13 +61,13 @@
         <img :src="kruger_wild1" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content2[1]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content2')[1]">{{ item }}</div>
         </span>
     </el-row>
     <!---- cape town --->
     <div
       style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ msg_title[3] }}</p>
+      <p class="to-center">{{ $t('travel.msg_title')[3] }}</p>
       <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
     </div>
     <el-row
@@ -76,7 +76,7 @@
         <img :src="capetown" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content3[0]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content3')[0]">{{ item }}</div>
         </span>
     </el-row>
     <el-row
@@ -85,13 +85,13 @@
         <img :src="capetown2" style="height: 400px; width: 640px;"/>
       </div>
       <span class="msg_content">
-          <div v-for="item in msg_content3[1]">{{ item }}</div>
+          <div v-for="item in $t('travel.msg_content3')[1]">{{ item }}</div>
         </span>
     </el-row>
     <!-- pdf download -->
     <div
       style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ download_title[0] }}</p>
+      <p class="to-center">{{ $t('travel.download_title')[0] }}</p>
       <p class="to-center" style="color:#ccc">{{ download_title_en[0] }}</p>
     </div>
     <el-row
@@ -253,15 +253,13 @@
         travel_hotel: travel_hotel,
         travel_banner: travel_banner,
         screenHeight: window.innerHeight,
-        msg_title: msg_title,
+//        msg_title: msg_title,
         msg_title_en: msg_title_en,
-        msg_content: msg_content,
-        msg_content1: msg_content1,
-        msg_content2: msg_content2,
-        msg_content3: msg_content3,
+//        msg_content: msg_content,
+//        msg_content1: msg_content1,
+//        msg_content2: msg_content2,
+//        msg_content3: msg_content3,
         msg_content4: msg_content4,
-        dialog_content: msg_title,
-        dialog_title: "奢华之旅",
         download_title: download_title,
         download_title_en: download_title_en,
         poster1: poster1,

@@ -6,8 +6,8 @@
         <router-link :to="service_addr[index]" style="cursor:pointer">
           <img :src="item" style="height: 100%;width: 100%;"/>
           <div class="my_dialog">
-            <div class="my_dialog_title">{{ dialog_title[index] }}</div>
-            <div class="my_dialog_content" v-for="msg_item in dialog_content[index]">{{ msg_item
+            <div class="my_dialog_title">{{ $t('home.dialog_title')[index] }}</div>
+            <div class="my_dialog_content" v-for="msg_item in $t('home.dialog_content')[index]">{{ msg_item
               }}
             </div>
           </div>
@@ -18,17 +18,17 @@
       <!-- visa -->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center">{{ $t("home.msg_title")[0] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[0] }}</span>
           <router-link to="/visa_service" target="_blank"
                        style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
-            更多
+            {{ $t('others.more')}}
           </router-link>
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(obj, index) in visaMsgLst" :key="obj[index]"
+        <el-col :span="6" v-for='(obj, index) in $t("home.visaMsgs")' :key="obj[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <router-link to="/visa_service" target="_blank"
@@ -44,7 +44,8 @@
                 <el-row>{{ obj[3] }}</el-row>
                 <div class="bottom clearfix">
                   <time class="time">{{ currentDate }}</time>
-                  <el-button type="text" class="button" @click="goto('/visa_service')">更多
+                  <el-button type="text" class="button" @click="goto('/visa_service')">
+                    {{ $t('others.more') }}
                   </el-button>
                 </div>
               </div>
@@ -55,17 +56,17 @@
       <!-- accounting -->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center">{{ $t("home.msg_title")[1] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[1] }}</span>
           <router-link to="/accounting_service" target="_blank"
                        style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
-            更多
+            {{ $t('others.more') }}
           </router-link>
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(msg, index) in accountMsgLst" :key="msg[index]"
+        <el-col :span="6" v-for="(msg, index) in $t('home.accountMsgs')" :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <router-link to="/accounting_service" target="_blank"
@@ -81,7 +82,8 @@
                 <div style="">{{ msg[3] }}</div>
                 <div class="bottom clearfix">
                   <time class="time">{{ currentDate }}</time>
-                  <el-button type="text" class="button" @click="goto('/accounting_service')">更多
+                  <el-button type="text" class="button" @click="goto('/accounting_service')">
+                    {{ $t('others.more') }}
                   </el-button>
                 </div>
               </div>
@@ -92,17 +94,17 @@
       <!-- value added-->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center">{{ $t("home.msg_title")[2] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[2] }}</span>
           <router-link to="/value_add_service" target="_blank"
                        style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
-            更多
+            {{ $t('others.more') }}
           </router-link>
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(msg, index) in value_add_msgs " :key="msg[index]"
+        <el-col :span="6" v-for="(msg, index) in $t('home.value_add_msgs') " :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <router-link to="/value_add_service" target="_blank"
@@ -118,7 +120,8 @@
                 <div style="">{{ msg[3] }}</div>
                 <div class="bottom clearfix">
                   <time class="time">{{ currentDate }}</time>
-                  <el-button type="text" class="button" @click="goto('/value_add_service')">更多
+                  <el-button type="text" class="button" @click="goto('/value_add_service')">
+                    {{ $t('others.more') }}
                   </el-button>
                 </div>
               </div>
@@ -129,17 +132,17 @@
       <!-- travel service -->
       <div
         style="text-align: left; margin-left:20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center">{{ $t("home.msg_title")[3] }}</p>
         <p class="to-center" style="color:#ccc">
           <span>{{ msg_title_en[3] }}</span>
           <router-link to="/travel_service" target="_blank"
                        style="float:right;text-decoration: none;font-weight: bold;font-size: medium">
-            更多
+            {{ $t('others.more') }}
           </router-link>
         </p>
       </div>
       <el-row style="margin:40px auto;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <el-col :span="6" v-for="(msg, index) in travel_msgs" :key="msg[index]"
+        <el-col :span="6" v-for="(msg, index) in $t('home.travel_msgs')" :key="msg[index]"
                 :offset="index > 0 ? 2 : 0"
                 style="width: 30%;margin: 15px 1.6%;padding-bottom:60px;border-bottom: 1px solid #ccc;">
           <router-link to="/travel_service" target="_blank"
@@ -155,7 +158,8 @@
                 <div style="">{{ msg[3] }}</div>
                 <div class="bottom clearfix">
                   <time class="time">{{ currentDate }}</time>
-                  <el-button type="text" class="button" @click="goto('/value_add_service')">更多
+                  <el-button type="text" class="button" @click="goto('/value_add_service')">
+                    {{ $t('others.more') }}
                   </el-button>
                 </div>
               </div>
@@ -191,7 +195,7 @@
       let msg_title_en = [
         "X-STAR VISA SOLUTIONS",
         "X-STAR ACCOUNTING SOLUTIONS",
-        "X-STAR VALUE-ADD SOLUTIONS",
+        "X-STAR VALUE-ADDED SOLUTIONS",
         "X-STAR TRAVEL SOLUTIONS",
       ]
       let msg_title = [
@@ -284,54 +288,49 @@
 
       let current_time = new Date().toLocaleDateString()
 
-      let dialog_title = [
-        "签证类服务",
-        "会计类服务",
-        "增值服务",
-        "奢华猎旅"
-      ]
-      let dialog_content = [
-        [
-          "南非注册结婚以及南非相关公证认证",
-          "南非永久居留PR申请，ID 申请",
-          "学生,陪伴,退休,商务考察等签证延期",
-          "进出关南非有逾期,滞留问题解决",
-        ], [
-          "对市场进入战略和投资结构的策划",
-          "跨境及南非的税务筹划,申报",
-          "人力资源管理",
-          "劳工法律咨询",
-          "对员工和管理人员提供南非会计准则遵循培训",
-        ], [
-          "我们公司充分利用在南非丰富的服务经验,人力资源和广阔的关系," +
-          "我们以合理的成本,高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目.",
-          "我们的客户主要为在南非的中资企业.客户设计行业包括,建筑,矿业,旅游业,零售,高科技等"
-        ],[
-          "每一个人身体里都有一个非洲的原始与神秘",
-          "只有非洲能告诉你,什么叫做真正的与自然为伍",
-          "这里是南非,是最能释放你野性的地方",
-          "今天,加入我们的彩虹之国私人定制之旅" ,
-          "让我们一起开启南非特有的奢华猎旅",
-          "以最独特的方式犒赏自己",
-        ]
-      ]
+//      let dialog_title = [
+//        "签证类服务",
+//        "会计类服务",
+//        "增值服务",
+//        "奢华猎旅"
+//      ]
+//      let dialog_content = [
+//        [
+//          "南非注册结婚以及南非相关公证认证",
+//          "南非永久居留PR申请，ID 申请",
+//          "学生,陪伴,退休,商务考察等签证延期",
+//          "进出关南非有逾期,滞留问题解决",
+//        ], [
+//          "对市场进入战略和投资结构的策划",
+//          "跨境及南非的税务筹划,申报",
+//          "人力资源管理",
+//          "劳工法律咨询",
+//          "对员工和管理人员提供南非会计准则遵循培训",
+//        ], [
+//          "我们公司充分利用在南非丰富的服务经验,人力资源和广阔的关系," +
+//          "我们以合理的成本,高质量和高速度的服务帮助客户成功地完成了大量在南非跨境项目.",
+//          "我们的客户主要为在南非的中资企业.客户设计行业包括,建筑,矿业,旅游业,零售,高科技等"
+//        ],[
+//          "每一个人身体里都有一个非洲的原始与神秘",
+//          "只有非洲能告诉你,什么叫做真正的与自然为伍",
+//          "这里是南非,是最能释放你野性的地方",
+//          "今天,加入我们的彩虹之国私人定制之旅" ,
+//          "让我们一起开启南非特有的奢华猎旅",
+//          "以最独特的方式犒赏自己",
+//        ]
+//      ]
       return {
         images: [show1, show2, show3, show4],
-        msg_title: msg_title,
         msg_title_en: msg_title_en,
         screenHeight: window.innerHeight,
         currentDate: current_time,
-        visaMsgLst: visaMsgs,
-        accountMsgLst: accountMsgs,
-        value_add_msgs: value_add_msgs,
-        travel_msgs: travel_msgs,
         visasub: [visasub1, visasub2, visasub3],
         accounting_sub: [accounting_sub1, accounting_sub2, accounting_sub3],
         value_add: [value_add_sub1, value_add_sub2, value_add_sub3],
         travel_imgs: [travel_sub1, travel_sub2, travel_sub3],
         service_addr: service_addr,
-        dialog_title: dialog_title,
-        dialog_content: dialog_content,
+        //dialog_title: dialog_title,
+//        dialog_content: dialog_content,
       }
     },
     mounted: function () {

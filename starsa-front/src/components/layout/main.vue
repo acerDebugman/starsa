@@ -14,7 +14,7 @@
         </el-menu-item>
         <el-menu-item index="/visa_service">
           <div class="mytitle">
-            签证类服务
+            {{ $t('title.visa') }}
           </div>
           <!--
           <div class="mybottom-line"
@@ -23,47 +23,50 @@
         </el-menu-item>
         <el-menu-item index="/accounting_service">
           <div class="mytitle">
-            会计类服务
+            {{ $t('title.accounting') }}
           </div>
         </el-menu-item>
         <el-menu-item index="/value_add_service">
           <div class="mytitle">
-            增值服务
+            {{ $t("title.value_added") }}
           </div>
         </el-menu-item>
         <el-menu-item index="/travel_service">
           <div class="mytitle">
-            机票旅游服务
+            {{ $t("title.travel") }}
           </div>
         </el-menu-item>
         <el-menu-item index="/about_us">
           <div class="mytitle">
-            关于我们
+            {{ $t("title.about_us") }}
           </div>
         </el-menu-item>
-        <el-menu-item index="/contact_us"
-                      style="margin-right:100px;padding:0px 40px 0px 0px;float: right">
-          <div class="mytitle">
-            联系我们
+
+        <el-menu-item :index="currentPath"
+                      style="padding:0px 40px 0px 0px;float:right;color: #fff;"
+        >
+          <div class="mytitle" @click="langToggle">
+           English
           </div>
         </el-menu-item>
-        <!--
-        <el-menu-item index="/chinese" style="padding:0px 40px 0px 0px;float: right">
+        <el-menu-item :index="currentPath"
+                      style="padding:0px 3px 0px 3px;float: right;color: #fff;">
           <div class="mytitle">
+            /
+          </div>
+        </el-menu-item>
+        <el-menu-item :index="currentPath"
+                      style="padding:0px 0px 0px 00px;float: right;color: #fff;">
+          <div class="mytitle" @click="langToggle">
             中文
           </div>
         </el-menu-item>
-        <el-menu-item :index="currentPath" style="padding:0px 3px 0px 3px;float: right">
+        <el-menu-item index="/contact_us"
+                      style="margin-right:100px;padding:0px 40px 0px 0px;float:right">
           <div class="mytitle">
-            |
+            {{ $t('title.contact_us') }}
           </div>
         </el-menu-item>
-        <el-menu-item index="/english" style="padding:0px 0px 20px 20px;float: right;">
-          <div class="mytitle">
-            English
-          </div>
-        </el-menu-item>
-        -->
       </el-menu>
     </el-header>
     <el-main id="segment-main"
@@ -91,44 +94,44 @@
             </p>
           </div>
           <div style="float:left; height:90%; border:0px solid #f00; width:25%;">
-            <p class="footer-title">产品服务</p>
+            <p class="footer-title">{{ $t('footer.product.service') }}</p>
             <p>
               <router-link to="/visa_service" target="_blank"
                            style="text-decoration: none;color: inherit">
-                签证类服务
+                {{ $t('footer.product.visa') }}
               </router-link>
             </p>
             <p>
               <router-link to="/accounting_service" target="_blank"
                            style="text-decoration: none;color: inherit">
-                会计类服务
+                {{ $t('footer.product.accounting') }}
               </router-link>
             </p>
             <p>
               <router-link to="/value_add_service" target="_blank"
                            style="text-decoration: none;color: inherit">
-                增值服务
+                {{ $t('footer.product.value_added') }}
               </router-link>
             </p>
             <p>
               <router-link to="/travel_service" target="_blank"
                            style="text-decoration: none;color: inherit">
-                奢华之旅服务
+                {{ $t('footer.product.travel') }}
               </router-link>
             </p>
           </div>
           <div style="float: left; height:90%; border:0px solid #f00; width:50%;">
-            <p class="footer-title">关于我们</p>
+            <p class="footer-title">{{ $t('footer.about_us.about_us') }}</p>
             <p>
               <router-link to="/about_us" target="_blank"
                            style="text-decoration: none;color: inherit">
-                公司简介
+                {{ $t('footer.about_us.company') }}
               </router-link>
             </p>
             <p>
               <router-link to="/about_us" target="_blank"
                            style="text-decoration: none;color: inherit">
-                团队介绍
+                {{ $t('footer.about_us.team') }}
               </router-link>
             </p>
             <!-- <a target="_blank" href="http://weibo.com/miaozhensystems" class="sina1">joe</a> -->
@@ -150,11 +153,8 @@
   export default  {
     name: "main",
     components: {},
-
     data() {
       return {
-        contact_us: "www.baidu.com",
-        usage_info: "www.baidu.com",
         activeIndex: '1',
         activeIndex2: '1',
         xstarlogo: xstarlogo,
@@ -164,11 +164,22 @@
     },
     mounted: function () {
 //      console.log(window.innerHeight);
+      console.log("in main: ", this.$i18n.locale)
     },
     methods: {
       handleSelect(key, keyPath) {
 //        console.log(key, keyPath);
         this.currentPath = key
+      },
+      langToggle(obj) {
+        console.log("langToggle: ", this.$i18n.locale)
+//        console.log("content: ", this.$i18n.messages.zh.message.text, this.$i18n)
+
+        if (this.$i18n.locale === 'en') {
+          this.$i18n.locale = 'zh'
+        } else {
+          this.$i18n.locale = 'en'
+        }
       }
     },
     watch: {}

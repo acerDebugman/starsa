@@ -6,7 +6,7 @@
     <!-- poster download -->
     <div
       style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-      <p class="to-center">{{ download_title[1] }}</p>
+      <p class="to-center">{{ $t('travel.download_title')[1] }}</p>
       <p class="to-center" style="color:#ccc">{{ download_title_en[1] }}</p>
     </div>
     <el-row

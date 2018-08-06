@@ -6,14 +6,14 @@
       <div class="my_dialog">
         <div class="my_dialog_title" style="font-size: x-large; line-height: 20px !important;">{{ dialog_title }}</div>
         <div class="my_dialog_content" style="font-size: large; line-height: 22px !important; margin-top: 0"
-             v-for="msg_item in dialog_content ">{{ msg_item }}
+             v-for="msg_item in $t('about.dialog_content') ">{{ msg_item }}
         </div>
       </div>
     </div>
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[0] }}</p>
+        <p class="to-center">{{ $t('about.msg_title')[0] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
       </div>
       <el-row
@@ -22,14 +22,14 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;">
-          <h3 style="line-height: 30px;">{{ company_info[0] }}</h3>
+          <h3 style="line-height: 30px;">{{ $t('about.company_info')[0] }}</h3>
         </div>
       </el-row>
 
       <!----  --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[1] }}</p>
+        <p class="to-center">{{ $t('about.msg_title')[1] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[1] }}</p>
       </div>
       <el-row
@@ -38,15 +38,15 @@
           <img :src="betty_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
-          <h1 style="font-size: xx-large;">{{ personal_name[0] }}</h1>
+          <h1 style="font-size: xx-large;">{{ $t("about.personal_name")[0] }}</h1>
           <h2>{{ personal_name_en[0] }}</h2>
-          <div style="font-size: x-large; line-height: 36px">{{ personal_info[0] }}</div>
+          <div style="font-size: x-large; line-height: 36px">{{ $t('about.personal_info')[0] }}</div>
         </div>
       </el-row>
       <!----  --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[2] }}</p>
+        <p class="to-center">{{ $t('about.msg_title')[2] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[2] }}</p>
       </div>
       <el-row
@@ -55,15 +55,15 @@
           <img :src="sam_ch" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
-          <h1 style="font-size: xx-large">{{ personal_name[1] }}</h1>
+          <h1 style="font-size: xx-large">{{ $t("about.personal_name")[1] }}</h1>
           <h2>{{ personal_name_en[1] }}</h2>
-          <div style="font-size: x-large; line-height: 36px">{{ personal_info[1] }}</div>
+          <div style="font-size: x-large; line-height: 36px">{{ $t('about.personal_info')[1] }}</div>
         </div>
       </el-row>
       <!--- --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ msg_title[3] }}</p>
+        <p class="to-center">{{ $t('about.msg_title')[3] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
       </div>
       <el-row
@@ -72,7 +72,7 @@
           <img :src="honour_wtt" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;">
-          <h1 style="line-height: 30px;">本司王婷婷总经理荣当第六届监事会副会长</h1>
+          <h1 style="line-height: 30px;">{{ $t("about.glory") }}</h1>
         </div>
       </el-row>
     </div>
@@ -141,21 +141,20 @@
 
       return {
         about_us: about_us,
-        msg_title: msg_title,
+//        msg_title: msg_title,
         msg_title_en: msg_title_en,
-        personal_info: personal_info,
+//        personal_info: personal_info,
         screenHeight: window.innerHeight,
-        personal_name: personal_name,
+//        personal_name: personal_name,
         personal_name_en: personal_name_en,
-        personal_info: personal_info,
-        company_info: company_info,
+//        company_info: company_info,
         betty_ch: betty_ch,
         betty_en: betty_en,
         honour_wtt: honour_wtt,
         sam_ch: sam_ch,
         sam_en: sam_en,
-        dialog_content: dialog_content,
-        dialog_title: "关于我们"
+//        dialog_content: dialog_content,
+//        dialog_title: "关于我们"
       }
     },
     mounted: function () {

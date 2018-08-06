@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import i18n from './i18n'
 import router from './router'
 import '@/assets/theme/index.css'
 import VueRouter from 'vue-router'
@@ -22,5 +23,6 @@ new Vue({
   components: { App },
   data: {
      eventHub: new Vue()
-  }
+  },
+  i18n
 })
