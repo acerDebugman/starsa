@@ -172,7 +172,7 @@
 </template>
 <script>
   import show1 from "@/assets/images/sa-flag.jpg"
-  import show2 from "@/assets/images/cooperation.jpg"
+  import show2 from "@/assets/images/sa-office.jpg"
   import show3 from "@/assets/images/value-add-show.jpg"
   import show4 from "@/assets/images/elephant-7-show.jpg"
   import visasub1 from "@/assets/images/visa-sub1.jpg"

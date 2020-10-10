@@ -148,6 +148,7 @@
           target="_blank" style="font-size: x-large">Revised-Visit-FamilyFriends-updated探亲和访友.pdf
         </a>
       </el-row>
+
       <div
         style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ $t("visa.download_title")[1] }}</p>
@@ -157,15 +158,60 @@
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <p/>
         <a
+          href="/static/doc/中国申请关键技能工作签证，获签后可以直接在南非申请PR.docx"
+          target="_blank" style="font-size: x-large">中国申请关键技能工作签证，获签后可以直接在南非申请PR.docx</a>
+        <p/>
+        <a
+          href="/static/doc/关键技能工作签证如何在南非申请PR.docx"
+          target="_blank" style="font-size: x-large">关键技能工作签证如何在南非申请PR.docx</a>
+        <p/>
+        <a
+          href="/static/doc/中国申请南非退休签证所需材料清单和注意事项.docx"
+          target="_blank" style="font-size: x-large">中国申请南非退休签证所需材料清单和注意事项.docx</a>
+        <p/>
+        <a
+          href="/static/doc/中国申请四年内部调动签证.docx"
+          target="_blank" style="font-size: x-large">中国申请四年内部调动签证.docx</a>
+        <p/>
+        <a
+          href="/static/doc/上海四年内调.docx"
+          target="_blank" style="font-size: x-large">上海四年内调.docx</a>
+        <p/>
+        <a
+          href="/static/doc/南非驻中国使领馆严查签证资料.docx"
+          target="_blank" style="font-size: x-large">南非驻中国使领馆严查签证资料.docx</a>
+        <p/>
+        <a
+          href="/static/doc/南非驻中国使领馆要给造假文件的签证中介“上一课”.docx"
+          target="_blank" style="font-size: x-large">南非驻中国使领馆要给造假文件的签证中介“上一课”.docx</a>
+        <p/>
+        <a
+          href="/static/doc/申请南非ID所需资料以及注意事项.docx"
+          target="_blank" style="font-size: x-large">申请南非ID所需资料以及注意事项.docx</a>
+        <p/>
+        <a
+          href="/static/doc/受此次疫情影响，南非移民总局对于华人签证做出临时调整和让步.docx"
+          target="_blank" style="font-size: x-large">受此次疫情影响，南非移民总局对于华人签证做出临时调整和让步.docx</a>
+        <p/>
+      </el-row>
+
+      <div
+        style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ $t("visa.download_title")[2] }}</p>
+        <p class="to-center" style="color:#ccc">{{ download_title_en[2] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <p/>
+        <a
           href="http://www.vfsglobal.cn/SouthAfrica/China/chinese/index.html"
           target="_blank" style="font-size: x-large">北京南非签证中心</a>
-        <p/>
       </el-row>
     </div>
   </div>
 </template>
 <script>
-  import show1 from "@/assets/images/visa-banner.jpg"
+  import show1 from "@/assets/images/visa-banner2.png"
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
   import health_red from "@/assets/images/visa_red3.png"
@@ -233,12 +279,14 @@
 
       let download_title = [
         "相关签证文档",
+        "2020年相关签证文档",
         "相关网站链接"
       ]
 
       let download_title_en = [
         "MORE VISA DOCUMENTS",
-        "RELATIVE LINKS"
+        "RELATIVE LINKS",
+        "RELATIVE VISA INFO IN 2020"
       ]
 
       let health_doc_title = [
@@ -273,7 +321,7 @@
 //        one_belt_one_road: one_belt_one_road,
 //        dialog_content: msg_title,
 //        dialog_title: "签证类服务",
-//        download_title: download_title,
+//         download_title: download_title,
         download_title_en: download_title_en,
 //        health_doc_content: health_doc_content,
 //        health_doc_title: health_doc_title

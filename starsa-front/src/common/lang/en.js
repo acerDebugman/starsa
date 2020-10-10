@@ -197,6 +197,7 @@ module.exports = {
 
     download_title_en: [
       "MORE VISA DOCUMENTS",
+      "RELATIVE VISA INFO IN 2020",
       "RELATIVE LINKS"
     ],
 
@@ -390,6 +391,53 @@ module.exports = {
   //about
   about: {
     dialog_title: "About Us",
+    msg_title: [
+      "Company Info",
+      "Visa Department of Commerce",
+      "Accounting Department",
+      "Professional Team",
+      "Glories"
+    ],
+    personal_info: [
+      "Graduate from Beijing Jiaotong University with a bachelor's degree in business administration. He has 8 years of visa service experience in South Africa. He specializes in various visas in South Africa," +
+      "Resolving the intractable diseases of corporate and individual visas in South Africa.",
+      "South African Certified Tax Agent. South African Registered Commercial Accountant. China Accounting Qualification Certificate. Member of the South African Taxation Association. Graduated from the University of Sydney, Australia," +
+      "Having a master's degree in accounting and a master's degree in finance. He has 7 years of financial work experience in South Africa. He specializes in tax reporting business." +
+      "Before joining our company, I have been responsible for the Chinese business in the local accounting firm in South Africa, familiar with the needs of Chinese customers. Currently in our company responsible for taxation and market business."
+    ],
+    company_info: [
+      "Company introduction: " +
+      "Since 2012, the company has been dedicated to professional handling of various visas in South Africa, ticket booking, handling of South African accounting accounts, customizing South African personalized luxury private travel, engaging in various business activities and exhibitions from China to South Africa, and local vehicles and warehouses in South Africa. , housing rental. Business scope includes: various types of visa processing, tax audit, financial reports, ticket booking, private travel, business negotiations, meeting schedules, security services, vehicles, warehouses, housing rental.",
+      "Vehicle rental:" +
+      "Signed a cooperation agreement with a number of professional car rental companies in South Africa to provide cheap and fast car rental services. According to your car needs, we will develop a personalized car solution covering a wide range of models to meet different needs.",
+      "Warehouse and House Rental:" +
+      "The company has a fixed long-term first-hand housing, providing warehouse, office and apartment rental services throughout South Africa. It can quickly and professionally find all kinds of low-cost warehouses, offices and apartments. Save you the cumbersome viewing time and Housing agency procedures allow you to get cheap listings in the most convenient way." +
+      "Security Services:" +
+      "Signed an agency agreement with a number of local professional security companies in South Africa to provide various types of security services for local Chinese companies. The business scope covers South Africa, providing professional security and protection for South China-funded enterprises.",
+      "One Belt and One Road Business Negotiation:" +
+      "Receiving domestic business delegations to South Africa, planning and organizing corresponding meetings and events according to customer requirements, and assisting inviting Chinese embassies and consulates in South Africa and certain leaders of the South African country (including the president and vice president) to participate."
+    ],
+
+    dialog_content: [
+      "X-star International Pty Ltd",
+      "Corp. addr: 26 ERNEST OPPENHEIMER STREET,VASCO DA GAMA HOUSE, BRUMA 2026",
+      "WeChat： 1060151666(Visa)  saminxhl(Accounting)",
+      "SA CEO: 0782763881  Betty Wang",
+      "Accounting Manager: 0846428984  Sam Xie",
+      "Travel Manager：+27729365435 张赟(Amelie Zhang) xstar-amelie@hotmail.com",
+      "SA Office Line: 011 0396355",
+    ],
+
+    glory: "The CEO of X-STAR Corp., Wang Tingting, was the vice president of the 6th Supervisory Committee.",
+    personal_name: [
+      "Betty Wang",
+      "Sam Xie",
+    ]
+  },
+
+  //contact
+  contact: {
+    dialog_title: "Contact Us",
     msg_title: [
       "Company Info",
       "Visa Department of Commerce",

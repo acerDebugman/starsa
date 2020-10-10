@@ -7,6 +7,7 @@ import accounting_service from '@/components/pages/accounting_service.vue'
 import value_add_service from '@/components/pages/value_add_service.vue'
 import travel_service from '@/components/pages/travel_service.vue'
 import about_us from '@/components/pages/about_us.vue'
+import contact_us from '@/components/pages/contact_us.vue'
 import travel_router_info from '@/components/pages/travel/router_info_service.vue'
 import travel_sa_info from '@/components/pages/travel/sa_info_service.vue'
 import travel_poster_info from '@/components/pages/travel/poster_info_service.vue'
@@ -41,7 +42,7 @@ export default new Router({
           ]
         },
         { path: '/about_us', component: about_us, name: 'about_us' },
-        { path: '/contact_us', component: about_us, name: 'contact_us' },
+        { path: '/contact_us', component: contact_us, name: 'contact_us' },
         { path: '/chinese', component: home_service, name: 'chinese_service' },
         { path: '/english', component: visa_service, name: 'english_service' },
       ]

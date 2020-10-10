@@ -5,8 +5,8 @@
       <img :src="about_us" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
         <div class="my_dialog_title" style="font-size: x-large; line-height: 20px !important;">{{ dialog_title }}</div>
-        <div class="my_dialog_content" style="font-size: large; line-height: 22px !important; margin-top: 0"
-             v-for="msg_item in $t('about.dialog_content') ">{{ msg_item }}
+        <div class="my_dialog_content" style="font-size: medium; line-height: 22px !important; margin-top: 0"
+             v-for="msg_item in $t('') ">{{ msg_item }}
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto; "/>
+          <img :src="corp_history" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;">
           <h3 style="line-height: 30px;">{{ $t('about.company_info')[0] }}</h3>
@@ -35,7 +35,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto; "/>
+          <img :src="betty_img" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
           <h1 style="font-size: xx-large;">{{ $t("about.personal_name")[0] }}</h1>
@@ -52,7 +52,7 @@
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
-          <img :src="sam_ch" style="height: auto; width: auto; "/>
+          <img :src="sam_img" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
           <h1 style="font-size: xx-large">{{ $t("about.personal_name")[1] }}</h1>
@@ -60,11 +60,30 @@
           <div style="font-size: x-large; line-height: 36px">{{ $t('about.personal_info')[1] }}</div>
         </div>
       </el-row>
-      <!--- --->
+      <!---- 专业团队  --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
         <p class="to-center">{{ $t('about.msg_title')[3] }}</p>
         <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
+      </div>
+      <el-row
+        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
+          <img :src="pro_team_img" style="height: auto; width: auto; "/>
+        </div>
+        <div style="border: 0px solid #f00; padding: 0px; margin: 0px;">
+          <h1 style="font-size: xx-large">专业团队</h1>
+          <div style="font-size: x-large; line-height: 36px">
+            团队核心成员均毕业于国内外知名高校,专门从事做账报税业务,具有丰富的财务经验和商务洽谈经验.
+            团队成员均来自南非本地高校和从事对接洽谈本地政府相关业务,专业处理各类本地政府相关业务问题和处理各类财务问题.
+          </div>
+        </div>
+      </el-row>
+      <!--- --->
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center">{{ $t('about.msg_title')[4] }}</p>
+        <p class="to-center" style="color:#ccc">{{ msg_title_en[4] }}</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
@@ -81,9 +100,14 @@
 <script>
   import betty_en from "@/assets/images/card-betty-en.jpg"
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
+  import corp_history from "@/assets/images/corp-history2.jpg"
+  import betty_img from "@/assets/images/betty_img.jpg"
   import sam_ch from "@/assets/images/card-sam-ch.jpg"
   import sam_en from "@/assets/images/card-sam-en.jpg"
-  import about_us from "@/assets/images/about-us-banner.jpg"
+  import sam_img from "@/assets/images/sam_img.jpg"
+  import pro_team_img from "@/assets/images/pro_team.jpg"
+  // import about_us from "@/assets/images/about-us-banner.jpg"
+  import about_us from "@/assets/images/about-us-office2.png"
   import honour_wtt from "@/assets/images/wangtingting_show.jpg"
 
   export default {
@@ -99,6 +123,7 @@
         "Company History",
         "Visa Service Manager",
         "Accounting Service Manager",
+        "Professional Team",
         "Honour"
       ]
       let personal_name = [
@@ -150,9 +175,13 @@
 //        company_info: company_info,
         betty_ch: betty_ch,
         betty_en: betty_en,
+        corp_history:corp_history,
+        betty_img: betty_img,
         honour_wtt: honour_wtt,
         sam_ch: sam_ch,
         sam_en: sam_en,
+        sam_img: sam_img,
+        pro_team_img: pro_team_img,
 //        dialog_content: dialog_content,
 //        dialog_title: "关于我们"
       }
