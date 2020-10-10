@@ -13,16 +13,18 @@
     <div style="overflow: auto;border:0px dotted #f00;width: 90%;margin: 30px auto;">
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ $t('contact.msg_title')[0] }}</p>
-        <p class="to-center" style="color:#ccc">{{ msg_title_en[0] }}</p>
+        <p class="to-center">微信二维码</p>
+        <p class="to-center" style="color:#ccc">Wechat QR code</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="float: left; margin-right: 20px;height: 400px;border: 0px solid #00f;">
-          <img :src="betty_ch" style="height: auto; width: auto; "/>
+          <img :src="wechat_betty" style="height: auto; width: auto; "/>
+          <img :src="wechat_anderson" style="height: auto; width: auto; "/>
+          <img :src="wechat_sam" style="height: auto; width: auto; "/>
         </div>
         <div style="border: 0px solid #f00;">
-          <h3 style="line-height: 30px;">{{ $t('contact.company_info')[0] }}</h3>
+          <h3 style="line-height: 30px;"></h3>
         </div>
       </el-row>
 
@@ -63,16 +65,27 @@
       <!--- --->
       <div
         style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
-        <p class="to-center">{{ $t('contact.msg_title')[3] }}</p>
-        <p class="to-center" style="color:#ccc">{{ msg_title_en[3] }}</p>
+        <p class="to-center">相关新闻</p>
+        <p class="to-center" style="color:#ccc">Relative News</p>
       </div>
       <el-row
         style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
-        <div style="float: left; margin-right: 20px;border: 0px solid #00f;">
-          <img :src="honour_wtt" style="height: auto; width: auto; "/>
-        </div>
         <div style="border: 0px solid #f00;">
-          <h1 style="line-height: 30px;">{{ $t("contact.glory") }}</h1>
+          <a href="http://www.52hrtt.com/mobileview/info?id=D1601427855501&areaId=27&behaviorSource=6&hrttInfoFontSize=2&languageId=1&flag=1"
+             target="_blank" style="font-size: large">在南非做老板 您必须要了解的VAT基本知识</a>
+          <p/>
+          <a href="http://www.52hrtt.com/mobileview/info?id=D1600993944208&areaId=27&behaviorSource=4&hrttInfoFontSize=2&languageId=1&flag=1"
+             target="_blank" style="font-size: large">新星国际·重磅推出国内申请4年内部调动签证〖2020年升级版〗</a>
+          <p />
+          <a href="http://www.52hrtt.com/mobileview/info?id=D1601427803315&areaId=27&behaviorSource=6&hrttInfoFontSize=2&languageId=1&flag=1"
+             target="_blank" style="font-size: large">申请亲属签证所需材料以及注意事项</a>
+          <p />
+          <a href="http://www.52hrtt.com/mobileview/info?id=D1551318764958&areaId=27&behaviorSource=4&languageId=1&from=singlemessage&isappinstalled=0&flag=1"
+             target="_blank" style="font-size: large">中国申请5年特殊技能签证收签中</a>
+          <p />
+          <a href="http://www.52hrtt.com/mobileview/info?id=D1600318418894&areaId=27&languageId=1&behaviorSource=4&flag=1"
+             target="_blank" style="font-size: large">新星国际亲情奉献手把手教你申请南非税号</a>
+          <p />
         </div>
       </el-row>
     </div>
@@ -83,6 +96,11 @@
   import betty_ch from "@/assets/images/card-betty-ch.jpg"
   import sam_ch from "@/assets/images/card-sam-ch.jpg"
   import sam_en from "@/assets/images/card-sam-en.jpg"
+
+  import wechat_sam from "@/assets/images/wechat_sam2.png"
+  import wechat_betty from "@/assets/images/wechat_betty2.png"
+  import wechat_anderson from "@/assets/images/wechat_anderson2.png"
+
   import about_us from "@/assets/images/about-us-banner.jpg"
   import honour_wtt from "@/assets/images/wangtingting_show.jpg"
 
@@ -153,6 +171,9 @@
         honour_wtt: honour_wtt,
         sam_ch: sam_ch,
         sam_en: sam_en,
+        wechat_sam: wechat_sam,
+        wechat_betty: wechat_betty,
+        wechat_anderson: wechat_anderson
 //        dialog_content: dialog_content,
 //        dialog_title: "关于我们"
       }

@@ -94,6 +94,34 @@
           <h1 style="line-height: 30px;">{{ $t("about.glory") }}</h1>
         </div>
       </el-row>
+
+      <!--- PPT --->
+      <div
+        style="text-align: left; margin:10px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">
+        <p class="to-center" style="margin-top:80px">公司相关介绍文档</p>
+        <p class="to-center" style="color:#ccc">Company Introduction</p>
+      </div>
+      <el-row style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
+        <div style="border: 0px solid #f00;">
+          <a href="/static/pdf/新星国际ppt.pdf"
+             target="_blank" style="font-size: large">新星国际PPT介绍.pdf</a>
+        </div>
+      </el-row>
+
+      <!--- 公司相关PPT --->
+<!--      <div-->
+<!--        style="text-align: left; margin:40px 20px;line-height: 10px; font-size:18px; border: 0px solid #f00">-->
+<!--        <p class="to-center"> 公司相关PPT </p>-->
+<!--        <p class="to-center" style="color:#ccc">{{ download_title_en[1] }}</p>-->
+<!--      </div>-->
+<!--      <el-row-->
+<!--        style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">-->
+<!--        <p/>-->
+<!--        <a-->
+<!--          href="/static/doc/中国申请关键技能工作签证，获签后可以直接在南非申请PR.docx"-->
+<!--          target="_blank" style="font-size: x-large">中国申请关键技能工作签证，获签后可以直接在南非申请PR.docx</a>-->
+<!--        <p/>-->
+<!--      </el-row>-->
     </div>
   </div>
 </template>
