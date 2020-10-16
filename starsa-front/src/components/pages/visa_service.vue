@@ -4,7 +4,7 @@
       <img :src="images[0]" style="height: 100%;width: 100%;"/>
       <div class="my_dialog">
         <div class="my_dialog_title">{{ $t("visa.dialog_title") }}</div>
-        <div class="my_dialog_content" v-for="msg_item in $t('visa.msg_title') ">{{ msg_item }}
+        <div class="my_dialog_content"  v-for="msg_item in $t('visa.msg_title') ">{{ msg_item }}
         </div>
       </div>
     </div>
@@ -329,7 +329,7 @@
     },
     mounted: function () {
 //      console.log(this.screenHeight);
-      let h = this.screenHeight / 7 * 5;
+      let h = this.screenHeight / 7 * 5.5;
       document.getElementById('show-img').style.height = h + "px";//页面初始化
       window.onresize = () => {
         return (() => {
