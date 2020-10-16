@@ -103,7 +103,7 @@
       </div>
       <el-row style="margin:20px 0px 20px 20px;line-height: 20px;text-align: left;border: 0px solid #00f;">
         <div style="border: 0px solid #f00;">
-          <a href="/static/pdf/新星国际ppt.pdf"
+          <a href="/static/pdf/新星国际ppt_v2.pdf"
              target="_blank" style="font-size: large">新星国际PPT介绍.pdf</a>
         </div>
       </el-row>

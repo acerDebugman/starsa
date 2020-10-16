@@ -9,7 +9,8 @@
                active-text-color="#f00"
                style="height:100%;align-content: center; min-width: 1200px"
                @select="handleSelect">
-        <el-menu-item index="/home_service">
+<!--        <el-menu-item index="/home_service">-->
+        <el-menu-item index="/visa_service">
           <img :src="xstarlogo" style="position:relative; top:20px; height: auto; width: auto;"/>
         </el-menu-item>
         <el-menu-item index="/visa_service">

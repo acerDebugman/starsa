@@ -24,7 +24,8 @@ export default new Router({
       path: '/main',
       name: 'main',
       component: Main,
-      redirect: "/home_service",
+      // redirect: "/home_service",
+      redirect: "/visa_service",
       children: [
         { path: '/home_service', component: home_service, name: 'home_service' },
         { path: '/visa_service', component: visa_service, name: 'visa_service' },
