@@ -141,7 +141,7 @@
         <div style="border-bottom: 1px solid #808080;margin:0"></div>
         <div style="padding-top: 10px">
           <strong>Copyright</strong>
-          © 2017 X-StarSA Systems. All Rights Reserved. 京公网安备 京ICP备17041274号-2
+          © 2017 X-StarSA Systems. All Rights Reserved. 京公网安备 <a href="https://beian.miit.gov.cn" target="_blank">京ICP备17041274号-2</a>
         </div>
       </div>
     </el-footer>
